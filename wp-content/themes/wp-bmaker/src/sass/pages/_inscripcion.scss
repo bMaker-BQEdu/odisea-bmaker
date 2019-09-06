@@ -1,0 +1,306 @@
+/**
+ * pages/inscription
+ * ---
+ * Inscription
+ */
+
+.user-forms-container {
+  .manual-register-form {
+    max-width: 800px;
+    h1 {
+      font-size: 20px;
+    }
+  }
+  .manual-login-form {
+    position: relative;
+    padding: 40px;
+    max-width: 400px;
+    label {
+      display: block;
+      font-weight: bold;
+    }
+    input {
+      display: block;
+      width: 100%;
+      height: calc(1.5em + .75rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #4e4d4d;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid $gray-500;
+      border-radius: $input-border-radius;
+      transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+      &.button-primary {
+        margin-top: 70px;
+        padding: .875rem .75rem;
+        height: auto;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        background-color: $success;
+        border-color: $success;
+      }
+    }
+    .lost-password {
+      position: absolute;
+      bottom: 185px;
+      right: 40px;
+    }
+  }
+  .success-register-wrapper {
+    margin: auto;
+    max-width: 500px;
+  }
+  .acf-table {
+    border: none ;
+    background-color: $white;
+  }
+  #acf-form-data + h2{
+    display: none;
+  }
+  .acf-field[data-name='he_leido_y_acepto_la_politica_de_privacidad'] > .acf-label {
+    display: none;
+  }
+  .acf-user-register-fields {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    .acf-required {
+      display: none;
+    }
+    &.-clear>.acf-field {
+      margin: 15px 0 30px;
+    }
+    .message {
+      a {
+        font-weight: bold;
+      }
+    }
+    .acf-repeater {
+      tbody {
+        border-bottom: 1px solid #DFDFDF;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+      .acf-row {
+        &.-collapsed {
+          a.acf-icon.-collapse.small {
+            transform: rotate(90deg);
+          }
+        }
+
+        a.acf-icon.-collapse.small {
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          color: transparent;
+          transform: rotate(180deg);
+          z-index: 11;
+          display: block;
+          border: none;
+          width: 40px;
+          height: 40px;
+          background-color: transparent;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 22 22'%3E%3Cpath fill='%23777' fill-rule='evenodd' d='M11 5.5c-.583 0-1.142.232-1.553.643l-7.702 7.708a2.197 2.197 0 0 0 3.104 3.107L11 10.803l6.151 6.155a2.197 2.197 0 0 0 3.104-3.107l-7.702-7.708A2.198 2.198 0 0 0 11 5.5'/%3E%3C/svg%3E%0A");
+
+          &:before {
+            opacity: 0;
+          }
+        }
+        > .acf-fields {
+          padding-top: 50px !important;
+          border-right: 1px solid #DFDFDF;
+          &:before {
+            content: " ";
+            position: absolute;
+            top: -2px;
+            left: -1px;
+            right: -1px;
+            height: 40px;
+            padding: 10px 25px;
+            border: solid 1px $gray-500;
+            background-color: $gray-400;
+            z-index: 5;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+          }
+        }
+      }
+      .acf-fields {
+        >.acf-field {
+          border: none;
+          padding-left: 15px;
+          padding-right: 15px;
+          &.acf-field-group {
+            > .acf-label {
+              position: relative;
+              padding-bottom: 30px;
+              margin-bottom: 0;
+              :before {
+                content: "Si tienes menos de 5 alumnos deja vacio los campos restantes";
+                position: absolute;
+                bottom: 10px;
+                margin-bottom: 0;
+                font-weight: normal;
+                color: $gray-600;
+                font-size: 12px;
+              }
+            }
+            .acf-fields  {
+              .acf-field {
+                display: flex;
+                align-items: center;
+                padding: 0 0 10px 0;
+              }
+              .acf-label {
+                margin: 0;
+                label {
+                  margin: 0;
+                  padding-right: 10px;
+                  font-weight: normal;
+                  white-space: nowrap;
+                  font-size: 15px;
+                }
+              }
+              .acf-input {
+                width: 100%;
+              }
+            }
+          }
+          .acf-radio-list {
+            label {
+              display: inline-block;
+              margin-bottom: 5px;
+              font-size: 16px;
+              color: $gray-700;
+              input[type="radio"] {
+                margin: -6px 10px 0 0;
+              }
+            }
+          }
+        }
+        .-border {
+          border: none;
+        }
+      }
+      .acf-repeater.-row > table > tbody > tr > td,
+      .acf-repeater.-block > table > tbody > tr > td,
+      .acf-repeater .acf-row-handle.order + td {
+        border-top-color: transparent;
+        border-left-color: transparent;
+      }
+      .acf-row-handle {
+        vertical-align: top !important;
+        background: #fff;
+        border-left-color: transparent;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        &:first-child {
+          position: relative;
+          border-color: transparent;
+          margin: 0;
+          padding: 0;
+          width: 0;
+          > span {
+            display: block;
+            position: absolute;
+            top: 6px;
+            left: 30px;
+            width: 100px;
+            font-weight: bold;
+            color: $gray-600;
+            text-shadow: none;
+            z-index: 10;
+            &:before {
+              content: "Equipo ";
+            }
+          }
+        }
+      }
+      .acf-icon.-plus {
+        display: none !important;
+      }
+      .acf-icon.-minus {
+        display: block;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 6px;
+        right: 10px;
+        background-repeat: no-repeat;
+        border-radius: 0;
+        background-position: center;
+        text-indent: -9999999px;
+        border: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20' height='20' viewBox='0 0 20 20'%3E%3Cdefs%3E%3Crect id='b' width='800' height='1502' x='240' y='140' rx='4'/%3E%3Cfilter id='a' width='101.8%25' height='100.9%25' x='-.9%25' y='-.3%25' filterUnits='objectBoundingBox'%3E%3CfeOffset dy='2' in='SourceAlpha' result='shadowOffsetOuter1'/%3E%3CfeGaussianBlur in='shadowOffsetOuter1' result='shadowBlurOuter1' stdDeviation='2'/%3E%3CfeColorMatrix in='shadowBlurOuter1' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0'/%3E%3C/filter%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%234E4D4D' d='M-960-596H320v1702H-960z'/%3E%3Cg transform='translate(-960 -596)'%3E%3Cuse fill='%23000' filter='url(%23a)' xlink:href='%23b'/%3E%3Cuse fill='%23FFF' xlink:href='%23b'/%3E%3C/g%3E%3Cpath fill='%23EEE' stroke='%23BBB' d='M-676-10H36a4 4 0 0 1 4 4v36h-720V-6a4 4 0 0 1 4-4z'/%3E%3Cpath fill='%23777' d='M15.625 16.441c0 .739-.56 1.337-1.247 1.337-.691 0-1.249-.598-1.248-1.338V6.894c0-.738.557-1.337 1.248-1.337.687 0 1.247.599 1.247 1.337v9.547zm-4.377 0c0 .739-.56 1.337-1.246 1.337-.692 0-1.252-.598-1.25-1.338V6.894c-.002-.738.558-1.337 1.25-1.337.686 0 1.245.599 1.246 1.337v9.547zm-4.378 0c0 .739-.56 1.337-1.248 1.337-.69 0-1.248-.598-1.247-1.338V6.894c-.001-.738.557-1.337 1.247-1.337.689 0 1.248.599 1.248 1.337v9.547zm9.084-14.97H11.796C11.61.63 10.878 0 10 0c-.88-.001-1.614.63-1.798 1.471H2.843C1.824 1.472 1 2.318 1 3.357a1.853 1.853 0 0 0 1.139 1.715l.023 13c0 1.064.842 1.928 1.883 1.928H15.955c1.04 0 1.884-.864 1.884-1.929l.02-12.999A1.852 1.852 0 0 0 19 3.357c0-1.04-.826-1.885-1.844-1.886h-1.202z'/%3E%3C/g%3E%3C/svg%3E%0A");
+        z-index: 10;
+        background-color: transparent;
+      }
+    }
+  }
+  .acf-actions {
+    padding: 10px 0 0;
+    text-align: left;
+  }
+  .acf-button.button.button-primary {
+    display: inline-block;
+    padding: 8px 5px 8px 50px;
+    width: 240px;
+    font-size: 1px;
+    font-weight: bold;
+    color: transparent;
+    border-radius: 4px;
+    border: solid 1px $gray-500;
+    background-color: $gray-400;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='22' height='22' viewBox='0 0 22 22'%3E%3Cdefs%3E%3Crect id='b' width='728' height='1526' x='20' y='100' rx='4'/%3E%3Cfilter id='a' width='101.9%25' height='100.9%25' x='-1%25' y='-.3%25' filterUnits='objectBoundingBox'%3E%3CfeOffset dy='2' in='SourceAlpha' result='shadowOffsetOuter1'/%3E%3CfeGaussianBlur in='shadowOffsetOuter1' result='shadowBlurOuter1' stdDeviation='2'/%3E%3CfeColorMatrix in='shadowBlurOuter1' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0'/%3E%3C/filter%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%234E4D4D' d='M-80-1175h768V491H-80z'/%3E%3Cg transform='translate(-80 -1175)'%3E%3Cuse fill='%23000' filter='url(%23a)' xlink:href='%23b'/%3E%3Cuse fill='%23FFF' xlink:href='%23b'/%3E%3C/g%3E%3Crect width='236' height='39' x='.5' y='.5' fill='%23EEE' stroke='%23BBB' rx='4' transform='translate(-20 -9)'/%3E%3Cpath fill='%23777' d='M13.322 8.678V3.322a2.303 2.303 0 0 0-.683-1.645A2.298 2.298 0 0 0 10.999 1C9.76 1 8.677 2.081 8.677 3.322v5.355H3.323C2.082 8.676 1 9.76 1 10.997c-.002.62.239 1.203.678 1.64a2.304 2.304 0 0 0 1.644.684l5.356.001v5.352c-.001.622.24 1.205.68 1.646a2.31 2.31 0 0 0 1.644.68 2.331 2.331 0 0 0 2.321-2.322v-5.356l5.357.001a2.319 2.319 0 0 0 1.638-.683 2.318 2.318 0 0 0-1.641-3.962h-5.355z'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    &:before {
+      content: "A\00F1 adir otro equipo más";
+      font-size: 14px;
+      color: $gray-600;;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .fields-wrapper {
+    padding: 20px 10px 0;
+  }
+  .register-actions{
+    padding: 20px 10px ;
+  }
+
+  @include media-breakpoint-up(md) {
+    .manual-register-form h1 {
+      font-size: 24px;
+    }
+    .fields-wrapper {
+      padding: 40px 40px 0;
+    }
+    .register-actions{
+      padding: 40px ;
+    }
+  }
+}
+
+/* Rewrite base
+-----------------
+ */
+body#error-page {
+  background: $gray-700;
+  color: $white;
+  font-family: $font-family-sans-serif;
+  margin: 2em auto;
+  padding: 1em 2em;
+  max-width: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

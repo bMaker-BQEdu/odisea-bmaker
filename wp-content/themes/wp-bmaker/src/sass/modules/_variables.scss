@@ -1,0 +1,181 @@
+/**
+ * modules/variables
+ * ---
+ */
+
+/**
+ * Colors
+ */
+
+$selection-bg: #04A4CC;
+
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #eeeeee;
+$gray-500: #bbbbbb;
+$gray-600: #777777;
+$gray-700: #4e4d4d;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+          "100": $gray-100,
+          "200": $gray-200,
+          "300": $gray-300,
+          "400": $gray-400,
+          "500": $gray-500,
+          "600": $gray-600,
+          "700": $gray-700,
+          "800": $gray-800,
+          "900": $gray-900
+  ),
+  $grays
+);
+
+$blue:    #1681c1;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #78af45;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+$colors: () !default;
+
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$tertiary:      #57b5c9;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-700 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+      "primary":    $primary,
+      "secondary":  $secondary,
+      "tertiary":   $tertiary,
+      "success":    $success,
+      "info":       $info,
+      "warning":    $warning,
+      "danger":     $danger,
+      "light":      $light,
+      "dark":       $dark,
+      "gray-400":   $gray-400,
+      "gray-600":   $gray-600,
+      "gray-500":   $gray-500
+  ),
+  $theme-colors
+);
+
+
+$font-family-sans-serif:      'Open Sans', sans-serif;;
+$font-family-monospace:       'Open Sans', sans-serif;
+
+$body-color:                $gray-700 ;
+
+
+$btn-font-size:  14px;
+
+
+// Links
+//
+// Style anchor elements.
+$link-color:  $tertiary;
+
+// Forms
+$form-group-margin-bottom: 1.5rem;
+
+$input-border-color:    $gray-500;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-min-width:                10rem !default;
+$dropdown-padding-y:                .5rem !default;
+$dropdown-spacer:                   .125rem !default;
+$dropdown-color:                    $body-color !default;
+$dropdown-bg:                       $white !default;
+$dropdown-border-color:             $gray-500;
+$dropdown-divider-bg:               $gray-200 !default;
+$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) !default;
+
+$dropdown-link-color:               $gray-900 !default;
+$dropdown-link-hover-color:         darken($gray-900, 5%) !default;
+$dropdown-link-hover-bg:            $gray-100 !default;
+
+
+$dropdown-link-disabled-color:      $gray-600 !default;
+
+$dropdown-item-padding-y:           .25rem !default;
+$dropdown-item-padding-x:           1.5rem !default;
+
+$dropdown-header-color:             $gray-600 !default;
+
+
+/**
+ * Grid
+ */
+
+$wrapper-width: 1280px;
+$grid-gutter-width:           40px;
+
+$padding-horizontal-base: 5px;
+$padding-vertical-base: 5px;
+$margin-horizontal-base: 5px;
+$margin-vertical-base: 5px;
+$margin-horizontal-large: 20px;
+$margin-vertical-large: 20px;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 1280px,
+        xl: 1920px
+) !default;
+
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+        sm: 100%,
+        md: 100%,
+        lg: 1140px,
+        xl: 1140px
+) !default;
+/**
+ * text sizes
+ */
+$text-sizes: (
+        0: 12px,
+        1: 14px,
+        2: 16px,
+        3: 18px,
+        4: 20px,
+        5: 24px,
+        6: 28px,
+        7: 30px,
+        8: 36px,
+        9: 40px,
+        10: 48px
+);

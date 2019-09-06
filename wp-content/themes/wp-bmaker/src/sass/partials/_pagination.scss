@@ -1,0 +1,17 @@
+/**
+ * partials/pagination
+ * ---
+ * Pagination
+ */
+.pagination-wrapper {
+  .page-numbers {
+    &.current .btn {
+      color: $white;
+      background-color: $gray-600;
+    }
+    .btn {
+      color: $gray-600;
+      border: 1px solid $gray-500;
+    }
+  }
+}

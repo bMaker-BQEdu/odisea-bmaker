@@ -1,0 +1,121 @@
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu .wp-menu-arrow, #adminmenu .wp-menu-arrow div, #adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, .folded #adminmenu li.current.menu-top, .folded #adminmenu li.wp-has-current-submenu {
+    background-color: #1681c1;
+}
+.wrap .add-new-h2, .wrap .add-new-h2:active, .wrap .page-title-action, .wrap .page-title-action:active {
+    color: #1681c1;
+}
+.wp-core-ui .button.button-primary.button-hero {
+    box-shadow: none;
+}
+.wp-core-ui .button-primary {
+    background: #78af45;
+    border: 1px solid #78af45;
+    box-shadow: none;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #78af45, 1px 0 1px #78af45, 0 1px 1px #78af45, -1px 0 1px #78af45;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+body {
+    background: #fff;
+}
+#wpadminbar {
+    color: #4e4d4d;
+    font-size: 13px;
+    /*height: 60px;*/
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+ }
+#wpadminbar .ab-empty-item,#wpadminbar a.ab-item,#wpadminbar>#wp-toolbar span.ab-label,#wpadminbar>#wp-toolbar span.noticon {
+    color: #4e4d4d;
+}
+#wpadminbar #adminbarsearch:before, #wpadminbar .ab-icon:before, #wpadminbar .ab-item:before {
+    color: #4e4d4d;
+}
+
+#wp-admin-bar-root-default #wp-admin-bar-site-name {
+    padding: 3px 10px;
+}
+.wp-admin #wpadminbar #wp-admin-bar-site-name>.ab-item:before {
+    content: " ";
+}
+#wpadminbar #wp-admin-bar-site-name > a.ab-item {
+    background: no-repeat  url("../img/logo-admin.png") top left;
+    height: 27px;
+    /*width: 342px;*/
+    /*height: 78px;*/
+    background-size: contain;
+    /*opacity: 0;*/
+    color: transparent;
+}
+
+.post-type-etapa01 .edit-post-meta-boxes-area.is-normal,
+.post-type-etapa02 .edit-post-meta-boxes-area.is-normal,
+.post-type-etapa03 .edit-post-meta-boxes-area.is-normal,
+.post-type-etapa04 .edit-post-meta-boxes-area.is-normal,
+.post-type-etapa05 .edit-post-meta-boxes-area.is-normal,
+.post-type-etapa06 .edit-post-meta-boxes-area.is-normal { position: absolute; top: 0px; right: 0; left: 0; }
+
+.post-type-etapa01 .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
+.post-type-etapa02 .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
+.post-type-etapa03 .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
+.post-type-etapa04 .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
+.post-type-etapa05 .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
+.post-type-etapa06 .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
+
+.post-type-etapa01 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle,
+.post-type-etapa02 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle,
+.post-type-etapa03 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle,
+.post-type-etapa04 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle,
+.post-type-etapa05 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle,
+.post-type-etapa06 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle
+{
+    background-color: #1681c1;
+}
+.post-type-etapa01 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle span,
+.post-type-etapa02 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle span,
+.post-type-etapa03 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle span,
+.post-type-etapa04 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle span,
+.post-type-etapa05 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle span,
+.post-type-etapa06 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle span
+{
+    color: #fff !important;
+    font-size: 16px;
+    color: #fff;
+}
+.post-type-etapa01 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle:hover,
+.post-type-etapa02 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle:hover,
+.post-type-etapa03 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle:hover,
+.post-type-etapa04 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle:hover,
+.post-type-etapa05 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle:hover,
+.post-type-etapa06 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle:hover
+{
+    background-color: #1681c1 !important;
+}
+.steps-wrap {
+    margin-top: 50px;
+}
+.steps-lst {
+    margin-top: 20px;
+    border-radius: 4px;
+    border: solid 1px #cccccc;
+}
+.steps-lst thead th {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: solid 1px #cccccc;
+}
+.steps-lst tbody td{
+    padding: 5px 20px;
+    border-bottom: solid 1px #cccccc;
+}
+.steps-lst tbody tr:last-child td {
+    border: none;
+}
+.wp-core-ui .steps-lst .button.button-primary.button-hero {
+    padding: 5px 20px;
+    line-height: 25px;
+    height: auto;
+}

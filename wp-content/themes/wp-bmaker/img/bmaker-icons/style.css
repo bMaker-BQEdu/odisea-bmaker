@@ -1,0 +1,28 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-logo_2 {
+  width: 4.275390625em;
+}
+
+.icon-logo_3 {
+  width: 3.150390625em;
+}
+
+.icon-logo {
+  width: 5.599609375em;
+}

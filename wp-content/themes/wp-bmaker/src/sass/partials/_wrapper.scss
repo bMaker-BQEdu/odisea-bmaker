@@ -1,0 +1,19 @@
+/**
+* partials/wrapper
+* ---
+*/
+
+
+.wrapper {
+	max-width: $wrapper-width;
+	padding: 0 $margin-horizontal-large;
+	margin: 0 auto;
+	position: relative;
+}
+
+.home {
+	> .wrapper {
+		max-width: 100%;
+		padding: 0;
+	}
+}

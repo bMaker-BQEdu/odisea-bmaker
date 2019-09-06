@@ -1,0 +1,83 @@
+/**
+ * partials/category
+ * ---
+ * Category
+ */
+
+.content-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background: url('./../../img/home/home-cover-400px.jpg') no-repeat center right;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(22, 129, 193, 0.8);
+  }
+  h1 {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    color: $white;
+  }
+  @include media-breakpoint-up(md) {
+    height: 160px;
+    justify-content: flex-start;
+    &:before {
+      background-image: linear-gradient(to right, rgba(22, 129, 193, 0.9), rgba(22, 129, 193, 0));
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    height: 200px;
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+.content-wrapper {
+  padding: 40px 0;
+  h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 0 0 20px 0;
+      list-style-type: none;
+      &:before {
+        content: "- ";
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 60px 0;
+
+  }
+  @at-root .page & {
+    max-width: 980px;
+  }
+}

@@ -1,0 +1,20 @@
+/**
+ * modules/mixins
+ * ---
+ */
+
+@mixin reset-box {
+	padding: 0;
+	margin: 0;
+}
+
+@mixin make-text-sizes($text-sizes: $text-sizes) {
+	@each $index, $text-size in $text-sizes {
+		.text-size-#{$index} {
+			font-size: $text-size;
+		}
+		.line-height-#{$index} {
+			line-height: $text-size;
+		}
+	}
+}
