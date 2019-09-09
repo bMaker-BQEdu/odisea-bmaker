@@ -47,12 +47,12 @@
                                 );
                                 wp_login_form( $args ); ?>
                                 <a class="btn btn-primary w-100 mt-1 py-2" href="<?php echo wp_registration_url(); ?>"><span class="font-weight-bold">Inscríbete</span></a>
-                                <a class="text-right font-weight-bold w-100 lost-password" href="--><?php //echo wp_lostpassword_url( ); ?><!--" title="Recordar contraseña">¿Has olvidado tus datos?</a>
+                                <a class="text-right font-weight-bold w-100 lost-password" href="<?php echo wp_lostpassword_url( ); ?>" title="Recordar contraseña">¿Has olvidado tus datos?</a>
                             </div>
 
 
                         <?php  } else {
-//                            wp_redirect( admin_url( '/post-new.php?post_type=page' ), 301 );
+                           //wp_redirect( admin_url( '/post-new.php?post_type=page' ), 301 );
                             ?>
 
                             <p class="text-center py-5 my-5 text-size-4">Ya estás autenticado en la plataforma <a href="<?php echo admin_url( '' ) ?>">Entrar</a></p>
@@ -146,13 +146,96 @@
 
                                         if ( is_wp_error($user_id) ) {
 
-                                            $errorMessages .= '<div class="text-left text-danger mt-4">Username already exists. Please try another one.</div>';
+                                            $errorMessages .= '<div class="text-left text-danger mt-4">El username y/o el email ya existen, prueba con otro.</div>';
                                         } else {
 
                                             $from     = get_option('admin_email');
                                             $headers   = 'From: '.$from . "\r\n";
                                             $subject   = "Te has registrado en ODISEA bMaker";
-                                            $message   = "Hemos recibido su inscripción. \n Nos pondremos en contacto con contigo en la mayor brevedad posible para darte tus credenciales.";
+                                            $message   = "";
+                                            $message   = '<table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%">
+                                                            <tr valign="top" align="center">
+                                                                <td valign="top" align="center" style="padding-bottom: 50px;">
+                                                                    <table bgcolor="#ffffff" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:70px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+                                                                        <!-- Content footer -->
+                                                                        <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                                                                            <td align="center">
+                                                                                <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                                                                                    <a href='.home_url().'" target="_blank">
+                                                                                        <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/odisea-bMaker-logo@3x.png" alt="ODISEA bMaker" />
+                                                                                    </a>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <!-- /Content footer -->
+                                                                        <!-- Content mail -->
+                                                                        <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 0;">
+                                                                            <!-- Header -->
+                                                                            <td class="margins-mobile" align="left" style="padding-right: 50px; padding-left: 50px; padding-top: 40px;">
+                                                                                <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px; text-align: center; font-size: 20px; font-weight: bold;">¡BIENVENIDO A LA ODISEA bMaker!</p>
+                                                                                <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">¡Gracias por inscribirte en nuestro concurso!</p>
+                                                                                <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">En breve recibirás la confirmación de registro y las instrucciones del concurso. Desde ese momento ya podrás acceder a la página web iniciando sesión con tu usuario y contraseña.</p>
+                                                                                <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Cualquier duda o información adicional, contáctanos: <strong>concursobMaker@macmillaneducation.com</strong></p>
+                                                                                <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">¡PREPÁRAOS PARA EL VIAJE!</p>
+                                                                                
+                                                                            </td>
+                                                                            <!-- /Header -->
+                                                                        </tr>
+                                                        
+                                                                        <!-- / Content mail -->
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr valign="top" align="center">
+                                                                <td valign="top" align="center" style="padding-bottom: 10px;">
+                                                                    <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:0px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+                                                                        <!-- Content footer -->
+                                                                        <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                                                                            <td align="center">
+                                                                                <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                                                                                    <a href="https://www.bq.com/es/" target="_blank">
+                                                                                        <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
+                                                                                    </a>
+                                                                                </p>
+                                                                            </td>
+                                                                             <td align="center">
+                                                                                <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                                                                                    <a href="https://www.macmillaneducationeverywhere.com/es/" target="_blank">
+                                                                                        <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
+                                                                                    </a>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <!-- /Content footer -->
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr valign="top" align="center">
+                                                                <td valign="top" align="center" style="padding-bottom: 50px;">
+                                                                    <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:10px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+                                                                        <!-- Content footer -->
+                                                                        <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                                                                            <td align="center">
+                                                                                <a style="color: #fff; text-decoration: none;" href="'.home_url().'" target="_blank">Contacto</a>
+                                                                            </td>
+                                                                             <td align="center">
+                                                                                <a style="color: #fff; text-decoration: none;" href="'.home_url().'/politica-privacidad" target="_blank">Política de privacidad</a>
+                                                                            </td>
+                                                                            <td align="center">
+                                                                                <a style="color: #fff; text-decoration: none;" href="'.home_url().'/politica-de-cookies" target="_blank">Política de cookies</a>
+                                                                            </td>
+                                                                            <td align="center">
+                                                                                <a style="color: #fff; text-decoration: none;" href="'.home_url().'/bases-del-concurso" target="_blank">Condiciones de participación</a>
+                                                                            </td>
+                                                                            <td align="center">
+                                                                                <a style="color: #fff; text-decoration: none;" href="'.home_url().'" target="_blank">FAQ\'s</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <!-- /Content footer -->
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>';
 
                                             // Email password and other details to the user
                                             wp_mail( $email, $subject, $message, $headers );

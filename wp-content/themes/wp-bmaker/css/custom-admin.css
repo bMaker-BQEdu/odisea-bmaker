@@ -119,3 +119,23 @@ body {
     line-height: 25px;
     height: auto;
 }
+
+#poststuff #admin-page-notes .hndle.ui-sortable-handle, #editor-note-view .hndle.ui-sortable-handle {
+    background-color: #d82b32;
+}
+#poststuff #admin-page-notes .hndle.ui-sortable-handle span, #editor-note-view .hndle.ui-sortable-handle span {
+    color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#poststuff #admin-page-notes .hndle.ui-sortable-handle span:before, #editor-note-view .hndle.ui-sortable-handle span:before {
+    content: "Notas de revisión";
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#poststuff #admin-page-notes .handlediv .toggle-indicator {
+    color: #fff;
+}

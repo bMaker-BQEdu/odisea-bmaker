@@ -622,6 +622,187 @@ function disable_new_posts() {
 }
 add_action('admin_head', 'disable_new_posts');
 
+function wpemail_set_content_type(){
+    return "text/html";
+}
+add_filter( 'wp_mail_content_type','wpemail_set_content_type' );
+
+
+
+// add a new custom approval message
+function my_custom_request_appproval_message( $message, $user_login, $user_email = '' ) {
+    $default_admin_url = admin_url( 'users.php?s&pw-status-query-submit=Filter&new_user_approve_filter=pending&paged=1' );
+    $admin_url = apply_filters( 'new_user_approve_admin_link', $default_admin_url );
+    $user = get_user_by('login', $user_login);
+//    include('mails/email-aprobacion.php');
+    $message = ('
+<table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%">
+    <tr valign="top" align="center">
+        <td valign="top" align="center" style="padding-bottom: 50px;">
+            <table bgcolor="#ffffff" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:70px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+                <!-- Content footer -->
+                <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                    <td align="center">
+                        <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                            <a href="https://concurso.bmaker.es" target="_blank">
+                                <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="http://concurso.bmaker.es/concurso-bmaker/wp-content/themes/wp-bmaker/img/odisea-bMaker-logo@3x.png" alt="ODISEA bMaker" />
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+                <!-- /Content footer -->
+                <!-- Content mail -->
+                <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 0;">
+                    <!-- Header -->
+                    <td class="margins-mobile" align="left" style="padding-right: 50px; padding-left: 50px; padding-top: 40px;">
+                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px; text-align: center; font-size: 20px; font-weight: bold;">¡Hola!</p>
+                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Un nuevo usuario se ha registrado, revisa sus datos para aprobar o rechazar su participación en la ODISEA bMaker.</p>
+                       
+                        <p style="text-align: center; margin: 20px 0 0 0;">
+                            <a href="'.$admin_url.'" style="color: #fff; background-color:  #78af45; text-decoration: none; border-radius: 4px; padding: 10px 20px; font-weight: bold;">ENTRAR</a>
+                        </p>
+
+                    </td>
+                    <!-- /Header -->
+                </tr>
+
+                <!-- / Content mail -->
+            </table>
+        </td>
+    </tr>
+</table>');
+
+    $message = nua_do_email_tags( $message, array(
+        'context' => 'request_admin_approval_email',
+        'user_login' => $user_login,
+        'user_email' => $user->user_email,
+        'admin_url' => $admin_url,
+    ) );
+
+    return $message;
+}
+add_filter( 'new_user_approve_request_approval_message', 'my_custom_request_appproval_message', 10, 2 );
+
+// add a new custom approval message
+function my_custom_approve_approve_user_message( $message, $user_login, $user_email = '' ) {
+    $default_admin_url = admin_url( 'users.php?s&pw-status-query-submit=Filter&new_user_approve_filter=pending&paged=1' );
+    $admin_url = apply_filters( 'new_user_approve_admin_link', $default_admin_url );
+    $user = get_user_by('login', $user_login);
+//    include('mails/email-aprobacion.php');
+    $message = ('
+<table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%">
+    <tr valign="top" align="center">
+        <td valign="top" align="center" style="padding-bottom: 50px;">
+            <table bgcolor="#ffffff" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:70px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+                <!-- Content footer -->
+                <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                    <td align="center">
+                        <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                            <a href="'.home_url().'" target="_blank">
+                                <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/odisea-bMaker-logo@3x.png" alt="ODISEA bMaker" />
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+                <!-- /Content footer -->
+                <!-- Content mail -->
+                <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 0;">
+                    <!-- Header -->
+                    <td class="margins-mobile" align="left" style="padding-right: 50px; padding-left: 50px; padding-top: 40px;">
+                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px; text-align: center; font-size: 20px; font-weight: bold;">¡BIENVENIDO A TU CUENTA ODISEA bMaker!</p>
+                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Inicia sesión en el portal del concurso y comienza a desarrollar tu proyecto</p>
+                        <p style="text-align: center; margin: 20px 0 0 0;">
+                            <a href="'. home_url( '/inscripcion?action=lostpassword' ).'" style="color: #57b5c9; font-weight: bold; font-size: 18px; ">¡Conseguir mi contraseña!</a>
+                        </p>
+                        <p style="text-align: center; margin: 20px 0 0 0;">
+                            <a href="'.home_url( '/inscripcion?action=login' ).'" style="color: #fff; background-color:  #78af45; text-decoration: none; border-radius: 4px; padding: 10px 20px; font-weight: bold;">ENTRAR</a>
+                        </p>
+                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Si necesitas asistencia técnica o tienes alguna duda, contáctanos en <strong>concursobMaker@macmillaneducation.com</strong></p>
+                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">¡FELIZ VIAJE!</p>
+                    </td>
+                    <!-- /Header -->
+                </tr>
+
+                <!-- / Content mail -->
+            </table>
+        </td>
+    </tr>
+    <tr valign="top" align="center">
+        <td valign="top" align="center" style="padding-bottom: 10px;">
+            <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:0px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+                <!-- Content footer -->
+                <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                    <td align="center">
+                        <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                            <a href="https://www.bq.com/es/" target="_blank">
+                                <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
+                            </a>
+                        </p>
+                    </td>
+                     <td align="center">
+                        <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                            <a href="https://www.macmillaneducationeverywhere.com/es/" target="_blank">
+                                <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+                <!-- /Content footer -->
+            </table>
+        </td>
+    </tr>
+    <tr valign="top" align="center">
+        <td valign="top" align="center" style="padding-bottom: 50px;">
+            <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:10px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+                <!-- Content footer -->
+                <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                    <td align="center">
+                        <a style="color: #fff; text-decoration: none;" href="'.home_url().'" target="_blank">Contacto</a>
+                    </td>
+                     <td align="center">
+                        <a style="color: #fff; text-decoration: none;" href="'.home_url().'/politica-privacidad" target="_blank">Política de privacidad</a>
+                    </td>
+                    <td align="center">
+                        <a style="color: #fff; text-decoration: none;" href="'.home_url().'/politica-de-cookies" target="_blank">Política de cookies</a>
+                    </td>
+                    <td align="center">
+                        <a style="color: #fff; text-decoration: none;" href="'.home_url().'/bases-del-concurso" target="_blank">Condiciones de participación</a>
+                    </td>
+                    <td align="center">
+                        <a style="color: #fff; text-decoration: none;" href="'.home_url().'" target="_blank">FAQ\'s</a>
+                    </td>
+                </tr>
+                <!-- /Content footer -->
+            </table>
+        </td>
+    </tr>
+</table>');
+
+    $message = nua_do_email_tags( $message, array(
+        'context' => 'request_admin_approval_email',
+        'user_login' => $user_login,
+        'user_email' => $user->user_email,
+        'admin_url' => $admin_url,
+    ) );
+
+    return $message;
+}
+add_filter( 'new_user_approve_approve_user_message', 'my_custom_approve_approve_user_message', 10, 2 );
+
+//quitar mensaje en /wp-login.php
+function my_custom_approve_register_instructions() {
+    return '';
+}
+add_filter( 'new_user_approve_welcome_message_default', 'my_custom_approve_register_instructions', 10, 2);
+
+// remove denial message
+remove_action( 'new_user_approve_deny_user', array( pw_new_user_approve(), 'deny_user' ) );
+
+function wploop_email_content_type() {
+    return 'text/html';
+}
+add_filter( 'wp_mail_content_type', 'wploop_email_content_type' );
+
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
@@ -688,19 +869,6 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 // Shortcodes
 add_shortcode('wpbmaker_shortcode_demo', 'wpbmaker_shortcode_demo'); // You can place [wpbmaker_shortcode_demo] in Pages, Posts now.
 add_shortcode('wpbmaker_shortcode_demo_2', 'wpbmaker_shortcode_demo_2'); // Place [wpbmaker_shortcode_demo_2] in Pages, Posts now.
-
-// Shortcodes above would be nested like this -
-// [wpbmaker_shortcode_demo] [wpbmaker_shortcode_demo_2] Here's the page title! [/wpbmaker_shortcode_demo_2] [/wpbmaker_shortcode_demo]
-
-//function be_post_block_template() {
-//    $post_type_object = get_post_type_object( 'etapa01' );
-//    $post_type_object->template = array(
-//        array( 'acf/ad' )
-//    );
-//
-//
-//}
-//add_action( 'init', 'be_post_block_template' );
 
 
 function prefix_disable_gutenberg($current_status, $post_type)
@@ -1031,11 +1199,11 @@ function create_post_type_custom_post_type_demo()
             'map_meta_cap' => true,
             'show_in_rest'  => true,
             'supports'=>array(
-//                'title',
+                'title',
 //                'editor',
 //                'thumbnail',
 //                'author',
-                'slug'
+//                'slug'
                 //'custom-fields',
             ),
             'taxonomies'=> array(

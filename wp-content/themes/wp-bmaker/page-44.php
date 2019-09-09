@@ -44,8 +44,8 @@
                                     <iframe width="100%" height="258" src="<?php echo($src); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                                 <h3 class="font-weight-bold"><?php _e( "El equipo ganador de primaria es…", "wpbmaker" )?> </h3>
-                                <dev class="team-name"><i><?php echo($teamName); ?></i></dev>
-                                <p class="description"><?php echo($description); ?></p>
+                                <p class="team-name"><i><?php echo($teamName); ?></i></p>
+                                <div class="description"><?php echo($description); ?></div>
                             </div>
                         </li>
                         <li id="post-<?php the_ID(); ?>-secundaria" <?php post_class('col-12 col-md-6'); ?>>
@@ -70,17 +70,18 @@
                                     <iframe width="100%" height="258" src="<?php echo($src); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                                 <h3 class="font-weight-bold"><?php _e( "El equipo ganador de secundaria es…", "wpbmaker" )?> </h3>
-                                <div class="team-name"><i><?php echo($teamName); ?></i></div>
-                                <p class="description"><?php echo($description); ?></p>
+                                <p class="team-name"><i><?php echo($teamName); ?></i></p>
+                                <div class="description"><?php echo($description); ?></div>
                             </div>
                         </li>
                     <?php endwhile; ?>
                      </ul>
+                     <p class="winners-footer text-center m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum aliquet ex in dignissim. Cras sagittis, velit vitae imperdiet scelerisque, tortor lacus facilisis ipsum.</p>
                  </div>
                 </div>
             <?php endif; ?>
             <div class="d-md-flex justify-content-between align-items-center row no-gutters mx-auto">
-                <p class="pt-4 pb-3 px-3 col-12 col-md-6 pl-lg-5"><?php _e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum aliquet ex in dignissim. Cras sagittis, velit vitae imperdiet scelerisque, tortor lacus facilisis ipsum, in finibus ligula ipsum vitae erat. Vivamus dictum justo eros, id feugiat risus ultrices ac. Sed tincidunt nisi eget ullamcorper tempor.', 'wpbmaker' ); ?></p>
+                <p class="pt-4 pb-3 px-3 col-12 col-md-6 pl-lg-5"><?php _e( 'El concurso Odisea bMaker consiste en desarrollar un proyecto tecnológico que utilice técnicas de programación, robótica y/o 3D, disponibles en el website <a class="font-weight-bold" href="https://www.bmaker.es/">bMaker</a> que haga más sostenible el entorno.', 'wpbmaker' ); ?></p>
                 <picture class="img-fluid col-12 col-md-6">
                     <!--[if IE 9]><video style="display: none;"><![endif]-->
                     <source srcset="<?php bloginfo('template_url'); ?>/img/home/home-section1-420px.jpg" media="(min-width: 1280px)">
@@ -129,8 +130,8 @@
                     <img class="my-5" width="300px" src="<?php bloginfo('template_url'); ?>/img/home/home-section3.svg" />
                     <div class="col-md-6 text-center text-md-left mb-4">
                         <h2 class="text-size-4 font-weight-bold"><?php _e( 'Inscríbete', 'wpbmaker' ); ?></h2>
-                        <p class="my-3"><?php _e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum aliquet ex in dignissim.', 'wpbmaker' ); ?></p>
-                        <a href="" class="btn btn-primary"><span class="font-weight-bold"><?php _e( 'Ir al formulario de inscripción', 'wpbmaker' ); ?></span></a>
+                        <p class="my-3"><?php _e( 'No pierdas la oportunidad de ganar un aula bMaker, inscribiéndote antes del 15 de noviembre.', 'wpbmaker' ); ?></p>
+                        <a href="" class="btn btn-primary"><span class="font-weight-bold"><?php _e( '¡Inscríbete Ya!', 'wpbmaker' ); ?></span></a>
                     </div>
                 </div>
             </div>

@@ -136,9 +136,10 @@
         //background-image: url('./../../img/home/bg-secundaria.svg');
         &:before {
           transform: perspective(630px) rotateY(-9deg) rotateX(9deg);
+          transform: perspective(630px) rotateY(-6deg) rotateX(10deg);
           top: 32px;
           left: 0;
-          right: 15px;
+          right: 5px;
           background-color: #ecab41;
         }
       }
@@ -150,14 +151,14 @@
         font-size: 18px;
       }
       .video-wrapper {
-        padding: 60px 35px 40px;
+        padding: 60px 25px 40px;
         iframe {
           height: 165px;
         }
         margin: 0 0 0;
         &:before {
           top: 39px;
-          left: 14px;
+          left: 8px;
           bottom: 0;
           right: 0;
           transform: perspective(630px) rotateY(6deg) rotateX(-9deg);
@@ -165,10 +166,10 @@
         &.secundaria {
           padding: 60px 23px 40px;
           &:before {
-            transform: perspective(630px) rotateY(-12deg) rotateX(5deg);
+            transform: perspective(630px) rotateY(-6deg) rotateX(10deg);
             top: 35px;
-            left: -13;
-            right: 15px;
+            left: 1px;
+            right: 10px;
 
           }
         }
@@ -179,6 +180,9 @@
     h2 {
       font-size: 30px;
     }
+    .winners-footer {
+      font-size: 18px;
+    }
     .video-card {
       h3,.team-name {
         font-size: 24px;
@@ -187,24 +191,24 @@
         font-size: 16px;
       }
       .video-wrapper {
-        padding: 53px 25px;
+        padding: 60px 44px 75px;
         margin: 0 0 0;
         iframe {
           height: 258px;
         }
           &:before {
             top: 39px;
-            left: 14px;
+            left: 17px;
             bottom: 0;
             right: 0;
           }
           &.secundaria {
-            padding: 53px 35px;
+            padding: 60px 55px 75px;
             &:before {
               transform: perspective(630px) rotateY(-6deg) rotateX(10deg);
               top: 28px;
               left: 0;
-              right: 15px;
+              right: 20px;
 
           }
         }

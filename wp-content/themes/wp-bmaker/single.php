@@ -50,7 +50,7 @@ $postType = array ('etapa01' => 'Primer hito',
 
 
 
-                    <?php //edit_post_link(); // Always handy to have Edit Post Links available ?>
+                    <?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
                     <?php //comments_template(); ?>
 
