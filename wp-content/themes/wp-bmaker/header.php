@@ -48,7 +48,7 @@
                             <?php wpbmaker_nav(); ?>
                             <div class="user-actions">
                                 <?php if (get_option('users_can_register')) { ?>
-                                    <a href="<?php echo bloginfo('url'); ?>/inscribete?action=register" class="btn btn-primary ml-2">
+                                    <a href="<?php echo bloginfo('url'); ?>/inscripcion/" class="btn btn-primary ml-2">
                                         <?php _e( 'Inscríbete', 'wpbmaker' ); ?>
                                     </a>
                                 <?php } ?>
@@ -57,7 +57,7 @@
                                         <?php _e( 'Entra como participante ', 'wpbmaker' ); ?>
                                     </a>
                                 <?php } else { ?>
-                                    <a href="<?php echo bloginfo('url'); ?>/inscribete?action=login" class="btn btn-success ml-2">
+                                    <a href="<?php echo bloginfo('url'); ?>/inscripcion/?action=login" class="btn btn-success ml-2">
                                         <?php _e( 'Entra como participante ', 'wpbmaker' ); ?>
                                     </a>
                                 <?php } ?>
