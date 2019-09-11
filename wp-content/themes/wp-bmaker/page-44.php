@@ -6,7 +6,7 @@
                 <div class="container">
                     <span class="font-weight-bold text-size-5 mb-3 mt-md-4 mb-md-3 my-lg-4 d-block"><?php _e( 'I Edición del concurso', 'wpbmaker' ); ?></span>
                     <h1 class="my-lg-3"><svg height="60" alt="<?php _e( 'ODISEA bMaker', 'wpbmaker' ); ?>" class="icon icon-logo"><use xlink:href="<?php bloginfo('template_url'); ?>/img/bmaker-icons/symbol-defs.svg#icon-logo"></use></svg></h1>
-                    <p class="font-weight-bold py-3 mb-3 mb-md-0"><?php _e( 'Participa en el viaje Odisea bMaker,  consigue un aula maker para tu centro y contribuye a la igualdad de oportunidades en la educación', 'wpbmaker' ); ?></p>
+                    <p class="font-weight-bold py-3 mb-3 mb-md-0"><?php _e( 'Participa en la Odisea bMaker,  consigue un aula maker para tu centro y contribuye a la igualdad de oportunidades en la educación', 'wpbmaker' ); ?></p>
                 </div>
             </div>
             <?php
@@ -81,7 +81,7 @@
                 </div>
             <?php endif; ?>
             <div class="d-md-flex justify-content-between align-items-center row no-gutters mx-auto">
-                <p class="pt-4 pb-3 px-3 col-12 col-md-6 pl-lg-5"><?php _e( 'El concurso Odisea bMaker consiste en desarrollar un proyecto tecnológico que utilice técnicas de programación, robótica y/o 3D, disponibles en el website <a class="font-weight-bold" href="https://www.bmaker.es/">bMaker</a> que haga más sostenible el entorno.', 'wpbmaker' ); ?></p>
+                <p class="pt-4 pb-3 px-3 col-12 col-md-6 pl-lg-5"><?php _e( 'El concurso consiste en desarrollar un proyecto bMaker que utilice técnicas de programación, robótica y/o 3D, disponibles en el website <a class="font-weight-bold" href="https://www.bmaker.es/">bMaker</a> que contribuya a crear un entorno más sostenible.', 'wpbmaker' ); ?></p>
                 <picture class="img-fluid col-12 col-md-6">
                     <!--[if IE 9]><video style="display: none;"><![endif]-->
                     <source srcset="<?php bloginfo('template_url'); ?>/img/home/home-section1-420px.jpg" media="(min-width: 1280px)">
@@ -98,28 +98,28 @@
                             <svg height="80px" width="80px" class="icon icon-icon-com-form"><use xlink:href="<?php bloginfo('template_url'); ?>/img/bmaker-icons/symbol-defs.svg#icon-icon-com-form"></use></svg>
                             <div class="ml-lg-3">
                                 <p class="font-weight-bold mt-3"><?php _e( 'Inscribe al equipo', 'wpbmaker' ); ?></p>
-                                <p><?php _e( 'Inscribelo a través del formulario de inscripción con la ayuda de un profesor', 'wpbmaker' ); ?></p>
+                                <p><?php _e( 'A través del formulario de inscripción.', 'wpbmaker' ); ?></p>
                             </div>
                         </li>
                         <li class="col-12 col-md-6 pt-3 px-3 pb-1 d-lg-flex align-items-center">
                             <svg height="80px" width="80px" class="icon icon-icon-com-pencil-ruler"><use xlink:href="<?php bloginfo('template_url'); ?>/img/bmaker-icons/symbol-defs.svg#icon-icon-com-pencil-ruler"></use></svg>
                             <div class="ml-lg-3">
                                 <p class="font-weight-bold mt-3"><?php _e( 'Realiza el proyecto', 'wpbmaker' ); ?></p>
-                                <p><?php _e( 'Haced el proyecto que os toque según la categoria del equipo.', 'wpbmaker' ); ?></p>
+                                <p><?php _e( 'Construir un proyecto contribuyendo a crear un entorno más sostenible.', 'wpbmaker' ); ?></p>
                             </div>
                         </li>
                         <li class="col-12 col-md-6 pt-3 px-3 pb-1 d-lg-flex align-items-center">
                             <svg height="80px" width="80px" class="icon icon-icon-com-diary"><use xlink:href="<?php bloginfo('template_url'); ?>/img/bmaker-icons/symbol-defs.svg#icon-icon-com-diary"></use></svg>
                             <div class="ml-lg-3">
                                 <p class="font-weight-bold mt-3"><?php _e( 'Comparte tus hitos', 'wpbmaker' ); ?></p>
-                                <p><?php _e( 'Escribe y publica los 3 hitos para contarle al mundo que tal os va en el concurso.', 'wpbmaker' ); ?></p>
+                                <p><?php _e( 'Escribe y publica los tres hitos para contarle al mundo qué tal os va al concurso.', 'wpbmaker' ); ?></p>
                             </div>
                         </li>
                         <li class="col-12 col-md-6 pt-3 px-3 pb-1 d-lg-flex align-items-center">
                             <svg height="80px" width="80px" class="icon icon-icon-com-camera"><use xlink:href="<?php bloginfo('template_url'); ?>/img/bmaker-icons/symbol-defs.svg#icon-icon-com-camera"></use></svg>
                             <div class="ml-lg-3">
-                                <p class="font-weight-bold mt-3"><?php _e( 'Grábalo y envíanoslo', 'wpbmaker' ); ?></p>
-                                <p><?php _e( 'Graba en vídeo el resultado final, súbelo a youtube y envianos la URL', 'wpbmaker' ); ?></p>
+                                <p class="font-weight-bold mt-3"><?php _e( 'Graba y envía el proyecto', 'wpbmaker' ); ?></p>
+                                <p><?php _e( 'Graba en vídeo el resultado final, súbelo a youtube y envíanos la URL.', 'wpbmaker' ); ?></p>
                             </div>
                         </li>
                     </ol>
@@ -127,12 +127,20 @@
             </div>
             <div class="container inscription-banner">
                 <div class="d-flex flex-column flex-md-row-reverse align-items-center justify-content-md-end">
+                    <?php if (get_option('users_can_register')) { ?>
                     <img class="my-5" width="300px" src="<?php bloginfo('template_url'); ?>/img/home/home-section3.svg" />
                     <div class="col-md-6 text-center text-md-left mb-4">
                         <h2 class="text-size-4 font-weight-bold"><?php _e( 'Inscríbete', 'wpbmaker' ); ?></h2>
-                        <p class="my-3"><?php _e( 'No pierdas la oportunidad de ganar un aula bMaker, inscribiéndote antes del 15 de noviembre.', 'wpbmaker' ); ?></p>
-                        <a href="" class="btn btn-primary"><span class="font-weight-bold"><?php _e( '¡Inscríbete Ya!', 'wpbmaker' ); ?></span></a>
+                        <p class="my-3"><?php _e( 'No pierdas la oportunidad de ganar un aula Maker, inscribiéndote antes del 15 de noviembre', 'wpbmaker' ); ?></p>
+                        <a href="" class="btn btn-primary"><span class="font-weight-bold"><?php _e( '¡Ir al formulario de inscripción!', 'wpbmaker' ); ?></span></a>
                     </div>
+                    <?php } else { ?>
+                        <img class="my-5" width="300px" src="<?php bloginfo('template_url'); ?>/img/home/home-section-3-2.svg" />
+                        <div class="col-md-6 text-center text-md-left mb-4">
+                            <h2 class="text-size-4 font-weight-bold"><?php _e( 'Inscríbete', 'wpbmaker' ); ?></h2>
+                            <p class="my-3"><?php _e( 'Lo sentimos ya no se admiten más inscripciones, pero nos gustaría contar contigo para la próxima edición de Odisea bMaker, así que visita de vez en cuando <a class="font-weight-bold" href="https://www.bmaker.es">www.bMaker.es</a> para enterarte de cuando será.', 'wpbmaker' ); ?></p>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
             <div class="commitment-banner bg-primary text-center text-white pt-5">

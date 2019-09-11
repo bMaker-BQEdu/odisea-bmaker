@@ -24,7 +24,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Hito1: ¿Ya tienes equipo? Educación inclusiva y aprendizaje cooperativo</td>
+                        <td>Hito 1: ¿Ya tienes equipo? Educación inclusiva y aprendizaje cooperativo</td>
                         <td>09 al 15 de Diciembre</td>
                         <td>
                             <a class="button button-primary button-hero add-etapa01" href='./post-new.php?post_type=etapa01'>Editar</a>
@@ -32,7 +32,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
                         </td>
                     </tr>
                     <tr>
-                        <td>Hito3: ¿Cuál es el problema de sostenibilidad que quieres solucionar? Porqué poner soluciones al entorno</td>
+                        <td>Hito 3: ¿Cuál es el problema de sostenibilidad que quieres solucionar? ¿Por qué poner soluciones al entorno?</td>
                         <td>17 al 23 de Febrero</td>
                         <td>
                             <a class="button button-primary button-hero add-etapa03" href='./post-new.php?post_type=etapa03'>Editar</a>
@@ -48,7 +48,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
                         </td>
                     </tr>
                     <tr>
-                        <td>Hito5: Cuéntanos tu experiencia.</td>
+                        <td>Hito 5: Cuéntanos tu experiencia.</td>
                         <td>13 al 19 de Abril</td>
                         <td>
                             <a class="button button-primary button-hero add-etapa05" href='./post-new.php?post_type=etapa05'>Editar</a>

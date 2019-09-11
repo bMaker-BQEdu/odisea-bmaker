@@ -121,6 +121,7 @@ body {
 }
 
 #poststuff #admin-page-notes .hndle.ui-sortable-handle, #editor-note-view .hndle.ui-sortable-handle {
+    background-color: rgba(216, 43, 50, 0.3);
     background-color: #d82b32;
 }
 #poststuff #admin-page-notes .hndle.ui-sortable-handle span, #editor-note-view .hndle.ui-sortable-handle span {
@@ -134,6 +135,7 @@ body {
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
+    /*color: #d82b32;*/
 }
 
 #poststuff #admin-page-notes .handlediv .toggle-indicator {

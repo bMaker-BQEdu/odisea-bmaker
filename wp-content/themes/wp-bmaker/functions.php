@@ -667,6 +667,46 @@ function my_custom_request_appproval_message( $message, $user_login, $user_email
                 </tr>
 
                 <!-- / Content mail -->
+                 <tr valign="top" align="center">
+                    <td valign="top" align="center" style="padding-bottom: 10px;">
+                        <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:0px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+                            <!-- Content footer -->
+                            <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                                <td align="center">
+                                    <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                                        <a href="https://www.bq.com/es/" target="_blank">
+                                            <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
+                                        </a>
+                                    </p>
+                                </td>
+                                 <td align="center">
+                                    <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                                        <a href="https://www.macmillaneducationeverywhere.com/es/" target="_blank">
+                                            <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
+                                        </a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <!-- /Content footer -->
+                        </table>
+                    </td>
+                </tr>
+                <tr valign="top" align="center">
+                    <td valign="top" align="center" style="padding-bottom: 50px;">
+                        <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; padding:20px 0 20px 0; margin:10px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+                            <!-- Content footer -->
+                            <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                                <td align="center">
+                                    <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/politica-privacidad" target="_blank" rel="noopener">Política de privacidad</a>
+                                    <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/politica-de-cookies" target="_blank" rel="noopener">Política de cookies</a>
+                                    <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/bases-del-concurso" target="_blank" rel="noopener">Condiciones de participación</a>
+                                    <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/faqs" target="_blank" rel="noopener">FAQ\'s</a>
+                                </td>
+                            </tr>
+                            <!-- /Content footer -->
+                        </table>
+                    </td>
+                </tr>
             </table>
         </td>
     </tr>
@@ -711,14 +751,11 @@ function my_custom_approve_approve_user_message( $message, $user_login, $user_em
                     <td class="margins-mobile" align="left" style="padding-right: 50px; padding-left: 50px; padding-top: 40px;">
                         <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px; text-align: center; font-size: 20px; font-weight: bold;">¡BIENVENIDO A TU CUENTA ODISEA bMaker!</p>
                         <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Inicia sesión en el portal del concurso y comienza a desarrollar tu proyecto</p>
-                        <p style="text-align: center; margin: 20px 0 0 0;">
-                            <a href="'. home_url( '/inscripcion?action=lostpassword' ).'" style="color: #57b5c9; font-weight: bold; font-size: 18px; ">¡Conseguir mi contraseña!</a>
-                        </p>
-                        <p style="text-align: center; margin: 20px 0 0 0;">
+                       <p style="text-align: center; margin: 20px 0 30px 0;">
                             <a href="'.home_url( '/inscripcion?action=login' ).'" style="color: #fff; background-color:  #78af45; text-decoration: none; border-radius: 4px; padding: 10px 20px; font-weight: bold;">ENTRAR</a>
                         </p>
-                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Si necesitas asistencia técnica o tienes alguna duda, contáctanos en <strong>concursobMaker@macmillaneducation.com</strong></p>
-                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">¡FELIZ VIAJE!</p>
+                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Si necesitas asistencia técnica o tienes alguna duda, contáctanos en <br><a style="color: #57b5c9; font-weight: bold;" href="mailto:concursobMaker@macmillaneducation.com" target="_blank">concursobMaker@<wbr>macmillaneducation.com</a></p>
+                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px; text-align:center; font-weight: bold;">¡FELIZ VIAJE!</p>
                     </td>
                     <!-- /Header -->
                 </tr>
@@ -753,23 +790,14 @@ function my_custom_approve_approve_user_message( $message, $user_login, $user_em
     </tr>
     <tr valign="top" align="center">
         <td valign="top" align="center" style="padding-bottom: 50px;">
-            <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:10px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+            <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; padding:20px 0 20px 0; margin:10px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
                 <!-- Content footer -->
                 <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
                     <td align="center">
-                        <a style="color: #fff; text-decoration: none;" href="'.home_url().'" target="_blank">Contacto</a>
-                    </td>
-                     <td align="center">
-                        <a style="color: #fff; text-decoration: none;" href="'.home_url().'/politica-privacidad" target="_blank">Política de privacidad</a>
-                    </td>
-                    <td align="center">
-                        <a style="color: #fff; text-decoration: none;" href="'.home_url().'/politica-de-cookies" target="_blank">Política de cookies</a>
-                    </td>
-                    <td align="center">
-                        <a style="color: #fff; text-decoration: none;" href="'.home_url().'/bases-del-concurso" target="_blank">Condiciones de participación</a>
-                    </td>
-                    <td align="center">
-                        <a style="color: #fff; text-decoration: none;" href="'.home_url().'" target="_blank">FAQ\'s</a>
+                        <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/politica-privacidad" target="_blank" rel="noopener">Política de privacidad</a>
+                        <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/politica-de-cookies" target="_blank" rel="noopener">Política de cookies</a>
+                        <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/bases-del-concurso" target="_blank" rel="noopener">Condiciones de participación</a>
+                        <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/faqs" target="_blank" rel="noopener">FAQ\'s</a>
                     </td>
                 </tr>
                 <!-- /Content footer -->

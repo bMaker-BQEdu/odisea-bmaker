@@ -4,12 +4,12 @@
         <!-- /wrapper -->
         <!-- footer -->
         <footer class="footer bg-dark text-white">
-            <div class="container d-flex flex-column-reverse flex-md-row justify-content-between py-4 py-md-5 text-center">
-                <svg height="60px" width="188px" class="icon icon-logo_3 m-auto m-md-0"><use xlink:href="<?php bloginfo('template_url'); ?>/img/bmaker-icons/symbol-defs.svg#icon-logo_3"></use></svg>
+            <div class="container d-flex flex-column-reverse flex-md-row justify-content-between py-4 text-center">
+                <svg height="60px" width="188px" class="icon icon-logo_3 m-auto m-md-0 my-md-3"><use xlink:href="<?php bloginfo('template_url'); ?>/img/bmaker-icons/symbol-defs.svg#icon-logo_3"></use></svg>
 <!--                <img class="mx-auto m-md-0" width="140" src="--><?php //bloginfo('template_url'); ?><!--/img/odisea-bmaker-logo.png" />-->
-                <div class="text-md-right">
+                <div class="text-md-right my-md-3">
                     <p class="font-weight-bold mb-1"><?php _e( 'Contacto', 'wpbmaker' ); ?></p>
-                    <p><?php _e( 'hola@bmaker.es · 91 524 94 20', 'wpbmaker' ); ?></p>
+                    <p class="mb-md-0"><?php _e( 'concursobMaker@macmillaneducation.com', 'wpbmaker' ); ?></p>
                 </div>
             </div><!-- /.container -->
             <div class="text-center border-top">

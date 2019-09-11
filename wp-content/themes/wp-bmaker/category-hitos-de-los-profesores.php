@@ -77,15 +77,15 @@ $postType = array ('etapa01' => 'Primer hito',
                                     $thisauthorID = get_the_author_meta('ID');
                                     $centerName = get_the_author_meta('centro_educativo_al_que_pertenece_ellos_equipos', $thisauthorID);
                                     ?>
-                                    <p class="text-truncate text-white"><span class="bg-primary textarea-wrap text-size-0 px-2 py-1"><?php echo($centerName); ?></span></p>
+                                    <p class="text-truncate text-white mb-2"><span class="bg-primary textarea-wrap text-size-0 px-2 py-1"><?php echo($centerName); ?></span></p>
 
-                                    <p class="mt-3 text-size-1 text-truncate "><?php echo get_the_author_meta('first_name') .' '.get_the_author_meta('last_name'); ?></p>
+                                    <p class="mt-2 text-size-1 text-truncate "><?php echo get_the_author_meta('first_name') .' '.get_the_author_meta('last_name'); ?></p>
                                     <!-- post title -->
                                     <h2 class="text-size-1 font-weight-bold"> <?php the_title(); ?> </h2>
                                     <!-- /post title -->
 
                                     <!-- post details -->
-                                    <p class="d-flex justify-content-between align-items-center mt-4">
+                                    <p class="d-flex justify-content-between align-items-center mt-3 mb-2">
                                         <span class="rounded-pill bg-tertiary text-white text-size-0 px-2 py-1"><?php echo $postType [$postTypePost]; ?></span>
                                         <span class="date"><?php the_time('d/m/y'); ?></span>
                                     </p>
@@ -101,7 +101,10 @@ $postType = array ('etapa01' => 'Primer hito',
                 </div>
             </div><!-- #content -->
         <?php else : ?>
-            <p class="no-results"><?php _e( 'Todavía no hay nada que mostrar', 'wpbmaker' ); ?></p>
+            <div class="no-results d-flex align-items-center justify-content-center">
+                <p><?php _e( 'Todavía no hay contenido que mostrar.', 'wpbmaker' ); ?> <a class="font-weight-bold" href="<?php echo esc_url( get_category_link( 4 ) ); ?>"><?php _e( 'Ver todos los hitos >', 'wpbmaker' ); ?></a> </p>
+                <img class="my-5" width="300px" src="<?php bloginfo('template_url'); ?>/img/home/home-section-3-2.svg" />
+            </div>
         <?php endif; ?>
 
             <!-- Add the pagination functions here. -->

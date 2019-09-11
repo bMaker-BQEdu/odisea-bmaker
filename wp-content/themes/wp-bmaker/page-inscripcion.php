@@ -175,8 +175,10 @@
                                                                                 <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px; text-align: center; font-size: 20px; font-weight: bold;">¡BIENVENIDO A LA ODISEA bMaker!</p>
                                                                                 <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">¡Gracias por inscribirte en nuestro concurso!</p>
                                                                                 <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">En breve recibirás la confirmación de registro y las instrucciones del concurso. Desde ese momento ya podrás acceder a la página web iniciando sesión con tu usuario y contraseña.</p>
-                                                                                <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Cualquier duda o información adicional, contáctanos: <strong>concursobMaker@macmillaneducation.com</strong></p>
-                                                                                <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">¡PREPÁRAOS PARA EL VIAJE!</p>
+                                                                                <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 5px;">Usuario: <strong>'.$username.'</strong></p>
+                                                                                <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Contraseña: <strong>'.$random_password.'</strong></p>
+                                                                                <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Cualquier duda o información adicional, contáctanos: <br><a style="color: #57b5c9; font-weight: bold;" href="mailto:concursobMaker@macmillaneducation.com" target="_blank">concursobMaker@<wbr>macmillaneducation.com</a></p>
+                                                                                <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px; text-align: center;font-weight: bold;">¡PREPÁRAOS PARA EL VIAJE!</p>
                                                                                 
                                                                             </td>
                                                                             <!-- /Header -->
@@ -212,23 +214,15 @@
                                                             </tr>
                                                             <tr valign="top" align="center">
                                                                 <td valign="top" align="center" style="padding-bottom: 50px;">
-                                                                    <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:10px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+                                                                    <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; padding:20px 0 20px 0; margin:10px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
                                                                         <!-- Content footer -->
                                                                         <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                                                                  
                                                                             <td align="center">
-                                                                                <a style="color: #fff; text-decoration: none;" href="'.home_url().'" target="_blank">Contacto</a>
-                                                                            </td>
-                                                                             <td align="center">
-                                                                                <a style="color: #fff; text-decoration: none;" href="'.home_url().'/politica-privacidad" target="_blank">Política de privacidad</a>
-                                                                            </td>
-                                                                            <td align="center">
-                                                                                <a style="color: #fff; text-decoration: none;" href="'.home_url().'/politica-de-cookies" target="_blank">Política de cookies</a>
-                                                                            </td>
-                                                                            <td align="center">
-                                                                                <a style="color: #fff; text-decoration: none;" href="'.home_url().'/bases-del-concurso" target="_blank">Condiciones de participación</a>
-                                                                            </td>
-                                                                            <td align="center">
-                                                                                <a style="color: #fff; text-decoration: none;" href="'.home_url().'" target="_blank">FAQ\'s</a>
+                                                                                <a style="color: #fff; text-decoration: none; padding: 0 15px;" href="'.home_url().'/politica-privacidad" target="_blank" rel="noopener">Política de privacidad</a>
+                                                                                <a style="color: #fff; text-decoration: none; padding: 0 15px;" href="'.home_url().'/politica-de-cookies" target="_blank" rel="noopener">Política de cookies</a>
+                                                                                <a style="color: #fff; text-decoration: none; padding: 0 15px;" href="'.home_url().'/bases-del-concurso" target="_blank" rel="noopener">Condiciones de participación</a>
+                                                                                <a style="color: #fff; text-decoration: none; padding: 0 15px;" href="'.home_url().'/faqs" target="_blank" rel="noopener">FAQ\'s</a>
                                                                             </td>
                                                                         </tr>
                                                                         <!-- /Content footer -->
@@ -293,8 +287,8 @@
                             <?php } else { ?>
                                 <div class="success-register-wrapper text-center bg-white rounded mx-auto p-4 p-md-5 mt-4">
                                     <h1 class="text-size-10 font-weight-bold pb-4 text-size-10">¡Hecho!</h1>
-                                    <p class="font-weight-bold">Hemos recibido su inscripción</p>
-                                    <p class="mb-4">Nos pondremos en contacto con contigo en la mayor brevedad posible para darte tus credenciales.</p>
+                                    <p class="font-weight-bold">Hemos recibido tu inscripción</p>
+                                    <p class="mb-4">Nos pondremos en contacto contigo en la mayor brevedad posible para darte tus credenciales.</p>
                                     <a href="<?php echo home_url(); ?>" class="btn btn-gray-400 w-100 border-gray-500"><span class="font-weight-bold text-gray-600">Volver a la web</span></a>
                                 </div>
                             <?php } ?>
@@ -302,9 +296,8 @@
                         <?php } else { ?>
 
                             <div class="success-register-wrapper text-center bg-white rounded mx-auto p-4 p-md-5 mt-4">
-                                <h1 class="text-size-10 font-weight-bold pb-4 text-size-10">Las inscripciones están cerradas</h1>
-                                <p class="font-weight-bold">El plazo terminó el 15 de Noviembre incluido</p>
-                                <p class="mb-4"></p>
+                                <h1 class="text-size-5 font-weight-bold pb-4">No se admiten más inscripciones</h1>
+                                <p class="mb-4">Lo sentimos ya no se admiten más inscripciones, pero nos gustaría contar contigo para la próxima edición de Odisea bMaker, así que visita de vez en cuando <a class="font-weight-bold" href="http://www.bmaker.es">www.bmaker.es</a> para enterarte de cuando será.</p>
                                 <a href="<?php echo home_url(); ?>" class="btn btn-gray-400 w-100 border-gray-500"><span class="font-weight-bold text-gray-600">Volver a la web</span></a>
                             </div>
 
