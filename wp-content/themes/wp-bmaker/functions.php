@@ -831,6 +831,15 @@ function wploop_email_content_type() {
 }
 add_filter( 'wp_mail_content_type', 'wploop_email_content_type' );
 
+
+//Using this code you can activate your plugin from the functions.php
+function activate_plugin_via_php() {
+    $active_plugins = get_option( 'active_plugins' );
+    array_push($active_plugins, 'change-wp-admin-login/change-wp-admin-login.php');
+    update_option( 'active_plugins', $active_plugins );
+}
+add_action( 'init', 'activate_plugin_via_php' );  //Activate plugins
+
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
@@ -842,7 +851,7 @@ add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comment
 add_action('wp_enqueue_scripts', 'wpbmaker_styles'); // Add Theme Stylesheet
 add_action('init', 'register_wpbmaker_menu'); // Add WP bMaker Menu
 add_action('init', 'create_post_type_custom_post_type_demo'); // Add our WP bMaker Custom Post Type
-add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
+//add_action('widgets_init', 'my_remove_recinscripcionent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 //add_action('init', 'wpbmaker_pagination'); // Add our wpbmaker Pagination
 add_action('admin_menu', 'move_media'); // Move media in menu
 add_action('admin_head', 'remove_set_admin_color');
