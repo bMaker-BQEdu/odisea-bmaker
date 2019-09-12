@@ -150,6 +150,7 @@
                                         } else {
 
                                             $from     = get_option('admin_email');
+                                            $from     = 'no-reply@concursobmaker.es';
                                             $headers   = 'From: '.$from . "\r\n";
                                             $subject   = "Te has registrado en ODISEA bMaker";
                                             $message   = "";
