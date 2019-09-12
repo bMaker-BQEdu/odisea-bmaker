@@ -904,8 +904,8 @@ add_filter( 'authenticate', 'verify_username_password', 1, 3);
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
 // Shortcodes
-add_shortcode('wpbmaker_shortcode_demo', 'wpbmaker_shortcode_demo'); // You can place [wpbmaker_shortcode_demo] in Pages, Posts now.
-add_shortcode('wpbmaker_shortcode_demo_2', 'wpbmaker_shortcode_demo_2'); // Place [wpbmaker_shortcode_demo_2] in Pages, Posts now.
+//add_shortcode('wpbmaker_shortcode_demo', 'wpbmaker_shortcode_demo'); // You can place [wpbmaker_shortcode_demo] in Pages, Posts now.
+//add_shortcode('wpbmaker_shortcode_demo_2', 'wpbmaker_shortcode_demo_2'); // Place [wpbmaker_shortcode_demo_2] in Pages, Posts now.
 
 
 function prefix_disable_gutenberg($current_status, $post_type)
@@ -1326,20 +1326,16 @@ function create_post_type_custom_post_type_demo()
 /*------------------------------------*\
 	ShortCode Functions
 \*------------------------------------*/
-
-// Shortcode Demo with Nested Capability
-function wpbmaker_shortcode_demo($atts, $content = null)
-{
-    return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
-}
-
-// Shortcode Demo with simple <h2> tag
-function wpbmaker_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
-{
-    return '<h2>' . $content . '</h2>';
-}
-
-
+//
+//// Shortcode Demo with Nested Capability
+//function wpbmaker_shortcode_demo($atts, $content = null)
+//{
+//    return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
+//}
+//
+//// Shortcode Demo with simple <h2> tag
+//function wpbmaker_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
+//{
+//    return '<h2>' . $content . '</h2>';
+//}
 ?>
-
-
