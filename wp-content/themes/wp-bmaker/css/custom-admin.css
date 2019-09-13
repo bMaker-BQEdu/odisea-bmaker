@@ -56,8 +56,9 @@ body {
 .post-type-etapa03 .edit-post-meta-boxes-area.is-normal,
 .post-type-etapa04 .edit-post-meta-boxes-area.is-normal,
 .post-type-etapa05 .edit-post-meta-boxes-area.is-normal,
-.post-type-etapa06 .edit-post-meta-boxes-area.is-normal,
-.post-type-post-type-etapaextra .edit-post-meta-boxes-area.is-normal { position: absolute; top: 0px; right: 0; left: 0; }
+.post-type-etapa06 .edit-post-meta-boxes-area.is-normal
+/*.post-type-etapaextra #acf-group_5d7b6f39d0491 */
+{ position: absolute; top: 0px; right: 0; left: 0; }
 
 .post-type-etapa01 .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
 .post-type-etapa02 .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
@@ -65,7 +66,7 @@ body {
 .post-type-etapa04 .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
 .post-type-etapa05 .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
 .post-type-etapa06 .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
-.post-type-post-type-etapaextra .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}
+/*.post-type-etapaextra .edit-post-visual-editor.editor-styles-wrapper {margin-top: 180px;}*/
 
 .post-type-etapa01 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle,
 .post-type-etapa02 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle,
@@ -73,7 +74,7 @@ body {
 .post-type-etapa04 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle,
 .post-type-etapa05 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle,
 .post-type-etapa06 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle,
-.post-type-post-type-etapaextra .edit-post-meta-boxes-area.is-normal .ui-sortable-handle
+.post-type-etapaextra #acf-group_5d7b6f39d0491 .ui-sortable-handle
 {
     background-color: #1681c1;
 }
@@ -83,7 +84,7 @@ body {
 .post-type-etapa04 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle span,
 .post-type-etapa05 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle span,
 .post-type-etapa06 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle span,
-.post-type-post-type-etapaextra .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle span
+.post-type-etapaextra #acf-group_5d7b6f39d0491 .ui-sortable-handle.hndle span
 {
     color: #fff !important;
     font-size: 16px;
@@ -95,7 +96,7 @@ body {
 .post-type-etapa04 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle:hover,
 .post-type-etapa05 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle:hover,
 .post-type-etapa06 .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle:hover,
-.post-type-post-type-etapaextra .edit-post-meta-boxes-area.is-normal .ui-sortable-handle.hndle:hover
+.post-type-etapaextra #acf-group_5d7b6f39d0491 .ui-sortable-handle.hndle:hover
 {
     background-color: #1681c1 !important;
 }
