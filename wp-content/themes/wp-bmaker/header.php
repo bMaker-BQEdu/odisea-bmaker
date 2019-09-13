@@ -36,7 +36,7 @@
 			<header class="header clear">
 
                 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white">
-                    <div class="container">
+                    <div class="container text-center text-lg-left">
                         <a class="navbar-brand p-0" href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
                             <img height="40" src="<?php bloginfo('template_url'); ?>/img/odisea-bMaker-logo@3x.png" />
                         </a>
@@ -44,9 +44,9 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarSupportedContent">
                             <?php wpbmaker_nav(); ?>
-                            <div class="user-actions">
+                            <div class="user-actions mt-4 mt-lg-0">
                                 <?php if (get_option('users_can_register')) { ?>
                                     <a href="<?php echo bloginfo('url'); ?>/inscripcion/" class="btn btn-primary ml-2">
                                         <?php _e( 'Inscríbete', 'wpbmaker' ); ?>

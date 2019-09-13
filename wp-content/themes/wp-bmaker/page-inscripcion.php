@@ -55,7 +55,8 @@
                            //wp_redirect( admin_url( '/post-new.php?post_type=page' ), 301 );
                             ?>
 
-                            <p class="text-center py-5 my-5 text-size-4">Ya estás autenticado en la plataforma <a href="<?php echo admin_url( '' ) ?>">Entrar</a></p>
+                            <p class="text-center text-white pt-5 mt-5 text-size-4">Ya estás autenticado en la plataforma</p>
+                            <p class="text-center text-white pb-5 mb-5 text-size-4"><a class="btn btn-primary px-4 font-weight-bold"  href="<?php echo admin_url( '' ) ?>">Entrar</a></p>
                         <?php } ?>
 
                 <?php  } else { // Register Page ?>
