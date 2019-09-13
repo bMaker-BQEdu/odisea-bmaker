@@ -131,7 +131,7 @@
                     <img class="my-5" width="300px" src="<?php bloginfo('template_url'); ?>/img/home/home-section3.svg" />
                     <div class="col-md-6 text-center text-md-left mb-4">
                         <h2 class="text-size-4 font-weight-bold"><?php _e( 'Inscríbete', 'wpbmaker' ); ?></h2>
-                        <p class="my-3"><?php _e( 'No pierdas la oportunidad de ganar un aula Maker, inscribiéndote antes del 15 de noviembre', 'wpbmaker' ); ?></p>
+                        <p class="my-3"><?php _e( 'No pierdas la oportunidad de ganar un aula Maker, inscribiéndote antes del 15 de noviembre.', 'wpbmaker' ); ?></p>
                         <a href="" class="btn btn-primary"><span class="font-weight-bold"><?php _e( '¡Ir al formulario de inscripción!', 'wpbmaker' ); ?></span></a>
                     </div>
                 <?php } else { ?>
