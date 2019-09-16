@@ -585,16 +585,14 @@ function disable_new_posts() {
     $user_info = get_userdata( $user_id );
 
 
-    print_r($user_info->roles);
-
     if(in_array( 'teacher', $user_info->roles) ) {
         print_r('entro');
         //Get number of posts authored by user
         $args = array('post_type' =>'etapa01','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
         $count = count(get_posts($args));
-        print_r('$count '.$count);
+        print_r('$count etapa01 '.$count);
         //Conditionally remove link:
-        if($count===1) {
+        if($count>=1) {
             echo '<style type="text/css">
         #wp-admin-bar-new-etapa01, .post-type-etapa01 .page-title-action, #adminmenu .menu-icon-etapa01 .wp-submenu li:last-child { display:none; }
         </style>';
@@ -604,9 +602,10 @@ function disable_new_posts() {
         //Get number of posts authored by user
         $args = array('post_type' =>'etapa03','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
         $count = count(get_posts($args));
+        print_r('$count etapa03 '.$count);
 
         //Conditionally remove link:
-        if($count===1) {
+        if($count>=1) {
             echo '<style type="text/css">
         #wp-admin-bar-new-etapa03, .post-type-etapa03 .page-title-action, #adminmenu .menu-icon-etapa03 .wp-submenu li:last-child { display:none; }
         </style>';
@@ -615,9 +614,10 @@ function disable_new_posts() {
         //Get number of posts authored by user
         $args = array('post_type' =>'etapa05','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
         $count = count(get_posts($args));
+        print_r('$count etapa05 '.$count);
 
         //Conditionally remove link:
-        if($count===1) {
+        if($count>=1) {
             echo '<style type="text/css">
         #wp-admin-bar-new-etapa05, .post-type-etapa05 .page-title-action, #adminmenu .menu-icon-etapa05 .wp-submenu li:last-child { display:none; }
         </style>';
