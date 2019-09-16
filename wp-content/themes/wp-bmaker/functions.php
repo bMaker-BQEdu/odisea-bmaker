@@ -586,11 +586,9 @@ function disable_new_posts() {
 
 
     if(in_array( 'teacher', $user_info->roles) ) {
-        print_r('entro');
         //Get number of posts authored by user
         $args = array('post_type' =>'etapa01','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
         $count = count(get_posts($args));
-        print_r('$count etapa01 '.$count);
         //Conditionally remove link:
         if($count>=1) {
             echo '<style type="text/css">
@@ -602,7 +600,6 @@ function disable_new_posts() {
         //Get number of posts authored by user
         $args = array('post_type' =>'etapa03','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
         $count = count(get_posts($args));
-        print_r('$count etapa03 '.$count);
 
         //Conditionally remove link:
         if($count>=1) {
@@ -614,7 +611,6 @@ function disable_new_posts() {
         //Get number of posts authored by user
         $args = array('post_type' =>'etapa05','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
         $count = count(get_posts($args));
-        print_r('$count etapa05 '.$count);
 
         //Conditionally remove link:
         if($count>=1) {
