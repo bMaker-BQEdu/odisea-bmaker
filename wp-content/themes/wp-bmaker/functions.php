@@ -583,11 +583,16 @@ function disable_new_posts() {
     $user_id = $current_user->ID;
 
     $user_info = get_userdata( $user_id );
-    if(in_array( 'teacher', $user_info->roles) ) {
-        //Get number of posts authored by user
-        $args = array('post_type' =>'etapa01','author'=>$user_id,'fields'>'ids','post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
-        $count = count(get_posts($args));
 
+
+    print_r($user_info->roles);
+
+    if(in_array( 'teacher', $user_info->roles) ) {
+        print_r('entro');
+        //Get number of posts authored by user
+        $args = array('post_type' =>'etapa01','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
+        $count = count(get_posts($args));
+        print_r('$count '.$count);
         //Conditionally remove link:
         if($count===1) {
             echo '<style type="text/css">
@@ -597,7 +602,7 @@ function disable_new_posts() {
         }
 
         //Get number of posts authored by user
-        $args = array('post_type' =>'etapa03','author'=>$user_id,'fields'>'ids','post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
+        $args = array('post_type' =>'etapa03','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
         $count = count(get_posts($args));
 
         //Conditionally remove link:
@@ -608,7 +613,7 @@ function disable_new_posts() {
 
         }
         //Get number of posts authored by user
-        $args = array('post_type' =>'etapa05','author'=>$user_id,'fields'>'ids','post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
+        $args = array('post_type' =>'etapa05','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
         $count = count(get_posts($args));
 
         //Conditionally remove link:
