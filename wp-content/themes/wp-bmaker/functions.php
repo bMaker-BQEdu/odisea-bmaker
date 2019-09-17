@@ -50,25 +50,25 @@ require_once('inc/class-wp-bootstrap-navwalker.php');
 // WP bMaker navigation
 function wpbmaker_nav()
 {
-	wp_nav_menu(
-	array(
-		'theme_location'  => 'header-menu',
-		'menu'            => '',
-		'container'       => 'div',
-		'container_class' => 'collapse navbar-collapse',
-		'container_id'    => 'bs-example-navbar-collapse-1',
-		'menu_class'      => 'navbar-nav',
-		'menu_id'         => '',
-		'echo'            => true,
-		'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-		'before'          => '',
-		'after'           => '',
-		'link_before'     => '',
-		'link_after'      => '',
-		'depth'           => 2,
-		'walker'          => new WP_Bootstrap_Navwalker()
-		)
-	);
+    wp_nav_menu(
+        array(
+            'theme_location'  => 'header-menu',
+            'menu'            => '',
+            'container'       => 'div',
+            'container_class' => 'collapse navbar-collapse',
+            'container_id'    => 'bs-example-navbar-collapse-1',
+            'menu_class'      => 'navbar-nav',
+            'menu_id'         => '',
+            'echo'            => true,
+            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+            'before'          => '',
+            'after'           => '',
+            'link_before'     => '',
+            'link_after'      => '',
+            'depth'           => 2,
+            'walker'          => new WP_Bootstrap_Navwalker()
+        )
+    );
 }
 function wpbmakerfooter_nav()
 {
@@ -114,25 +114,25 @@ function add_script_tag_attributes($tag, $handle)
 {
     switch ($handle) {
 
-    	// adding async to main js bundle
-    	// for defer, replace async="async" with defer="defer"
-    	case ('wpbmakerscripts'):
-    		return str_replace( ' src', ' async="async" src', $tag );
-    	break;
+        // adding async to main js bundle
+        // for defer, replace async="async" with defer="defer"
+        case ('wpbmakerscripts'):
+            return str_replace( ' src', ' async="async" src', $tag );
+            break;
 
-    	// example adding CDN integrity and crossorigin attributes
-    	// Note: popper.js is loaded into the main.bundle.js from npm
-    	// This is just an example
+        // example adding CDN integrity and crossorigin attributes
+        // Note: popper.js is loaded into the main.bundle.js from npm
+        // This is just an example
         case ('popper-js'):
             return str_replace( ' min.js', 'min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"', $tag );
-        break;
+            break;
 
-    	// example adding CDN integrity and crossorigin attributes
-    	// Note: bootstrap.js is loaded into the main.bundle.js from npm
-    	// This is just an example
+        // example adding CDN integrity and crossorigin attributes
+        // Note: bootstrap.js is loaded into the main.bundle.js from npm
+        // This is just an example
         case ('bootstrap-js'):
             return str_replace( ' min.js', 'min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"', $tag );
-        break;
+            break;
 
         default:
             return $tag;
@@ -343,64 +343,64 @@ function enable_threaded_comments()
 // Custom Comments Callback
 function wpbmakercomments($comment, $args, $depth)
 {
-	$GLOBALS['comment'] = $comment;
-	extract($args, EXTR_SKIP);
+    $GLOBALS['comment'] = $comment;
+    extract($args, EXTR_SKIP);
 
-	if ( 'div' == $args['style'] ) {
-		$tag = 'div';
-		$add_below = 'comment';
-	} else {
-		$tag = 'li';
-		$add_below = 'div-comment';
-	}
-?>
+    if ( 'div' == $args['style'] ) {
+        $tag = 'div';
+        $add_below = 'comment';
+    } else {
+        $tag = 'li';
+        $add_below = 'div-comment';
+    }
+    ?>
     <!-- heads up: starting < for the html tag (li or div) in the next line: -->
     <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-	<?php if ( 'div' != $args['style'] ) : ?>
-	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-	<?php endif; ?>
-	<div class="comment-author vcard">
-	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-	<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
-	</div>
-<?php if ($comment->comment_approved == '0') : ?>
-	<em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
-	<br />
+    <?php if ( 'div' != $args['style'] ) : ?>
+    <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+<?php endif; ?>
+    <div class="comment-author vcard">
+        <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+        <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
+    </div>
+    <?php if ($comment->comment_approved == '0') : ?>
+    <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
+    <br />
 <?php endif; ?>
 
-	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
-		<?php
-			printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
-		?>
-	</div>
+    <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
+            <?php
+            printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
+        ?>
+    </div>
 
-	<?php comment_text() ?>
+    <?php comment_text() ?>
 
-	<div class="reply">
-	<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-	</div>
-	<?php if ( 'div' != $args['style'] ) : ?>
-	</div>
-	<?php endif; ?>
+    <div class="reply">
+        <?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+    </div>
+    <?php if ( 'div' != $args['style'] ) : ?>
+    </div>
+<?php endif; ?>
 <?php }
 
 // add Bootstrap 4 .img-fluid class to images inside post content
 function add_class_to_image_in_content($content)
 {
 
-	$content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
-	$document = new DOMDocument();
-	libxml_use_internal_errors(true);
-	if(utf8_decode($content)!='')
-	    $document->loadHTML(utf8_decode($content));
+    $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+    $document = new DOMDocument();
+    libxml_use_internal_errors(true);
+    if(utf8_decode($content)!='')
+        $document->loadHTML(utf8_decode($content));
 
-	$imgs = $document->getElementsByTagName('img');
-	foreach ($imgs as $img) {
-		$img->setAttribute('class','img-fluid');
-	}
+    $imgs = $document->getElementsByTagName('img');
+    foreach ($imgs as $img) {
+        $img->setAttribute('class','img-fluid');
+    }
 
-	$html = $document->saveHTML();
-	return $html;
+    $html = $document->saveHTML();
+    return $html;
 
 }
 
@@ -588,9 +588,9 @@ function disable_new_posts() {
     if(in_array( 'teacher', $user_info->roles) ) {
         //Get number of posts authored by user
         $args = array('post_type' =>'etapa01','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
-        $count = count(get_posts($args));
+        $count01 = count(get_posts($args));
         //Conditionally remove link:
-        if($count>=1) {
+        if($count01>=1) {
             echo '<style type="text/css">
         #wp-admin-bar-new-etapa01, .post-type-etapa01 .page-title-action, #adminmenu .menu-icon-etapa01 .wp-submenu li:last-child { display:none; }
         </style>';
@@ -599,10 +599,10 @@ function disable_new_posts() {
 
         //Get number of posts authored by user
         $args = array('post_type' =>'etapa03','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
-        $count = count(get_posts($args));
+        $count03 = count(get_posts($args));
 
         //Conditionally remove link:
-        if($count>=1) {
+        if($count03>=1) {
             echo '<style type="text/css">
         #wp-admin-bar-new-etapa03, .post-type-etapa03 .page-title-action, #adminmenu .menu-icon-etapa03 .wp-submenu li:last-child { display:none; }
         </style>';
@@ -610,10 +610,10 @@ function disable_new_posts() {
         }
         //Get number of posts authored by user
         $args = array('post_type' =>'etapa05','author'=>$user_id, 'post_status' => array('publish', 'pending', 'draft', 'auto-draft') );
-        $count = count(get_posts($args));
+        $count05 = count(get_posts($args));
 
         //Conditionally remove link:
-        if($count>=1) {
+        if($count05>=1) {
             echo '<style type="text/css">
         #wp-admin-bar-new-etapa05, .post-type-etapa05 .page-title-action, #adminmenu .menu-icon-etapa05 .wp-submenu li:last-child { display:none; }
         </style>';
@@ -666,48 +666,45 @@ function my_custom_request_appproval_message( $message, $user_login, $user_email
                     </td>
                     <!-- /Header -->
                 </tr>
-
-                <!-- / Content mail -->
-                 <tr valign="top" align="center">
-                    <td valign="top" align="center" style="padding-bottom: 10px;">
-                        <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:0px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
-                            <!-- Content footer -->
-                            <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
-                                <td align="center">
-                                    <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
-                                        <a href="https://www.bq.com/es/" target="_blank">
-                                            <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
-                                        </a>
-                                    </p>
-                                </td>
-                                 <td align="center">
-                                    <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
-                                        <a href="https://www.macmillaneducationeverywhere.com/es/" target="_blank">
-                                            <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
-                                        </a>
-                                    </p>
-                                </td>
-                            </tr>
-                            <!-- /Content footer -->
+                <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 0;">
+                     <td class="margins-mobile" align="left" style="padding-right: 50px; padding-left: 50px; padding-top: 40px;">
+                        <table bgcolor="#ffffff" cellspacing="0" cellpadding="0" width="100%">
+                         <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                            <td align="center" width="50%">
+                                <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                                    <a href="https://www.bq.com/es/" target="_blank">
+                                        <img height="60" width="257" style="height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
+                                    </a>
+                                </p>
+                            </td>
+                             <td align="center" width="50%">
+                                <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                                    <a href="https://www.macmillaneducationeverywhere.com/es/" target="_blank">
+                                        <img height="60" width="257" style="height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
+                                    </a>
+                                </p>
+                            </td>
+                        </tr>
                         </table>
+                     </td>
+                </tr>
+            <!-- / Content mail -->
+            </table>
+        </td>
+    </tr>
+    <tr valign="top" align="center">
+        <td valign="top" align="center" style="padding-bottom: 50px;">
+            <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; padding:20px 0 20px 0; margin:10px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
+                <!-- Content footer -->
+                <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                    <td align="center">
+                        <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/politica-privacidad" target="_blank" rel="noopener">Política de privacidad</a>
+                        <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/politica-de-cookies" target="_blank" rel="noopener">Política de cookies</a>
+                        <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/bases-del-concurso" target="_blank" rel="noopener">Condiciones de participación</a>
+                        <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/faqs" target="_blank" rel="noopener">FAQ\'s</a>
                     </td>
                 </tr>
-                <tr valign="top" align="center">
-                    <td valign="top" align="center" style="padding-bottom: 50px;">
-                        <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; padding:20px 0 20px 0; margin:10px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
-                            <!-- Content footer -->
-                            <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
-                                <td align="center">
-                                    <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/politica-privacidad" target="_blank" rel="noopener">Política de privacidad</a>
-                                    <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/politica-de-cookies" target="_blank" rel="noopener">Política de cookies</a>
-                                    <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/bases-del-concurso" target="_blank" rel="noopener">Condiciones de participación</a>
-                                    <a style="color: #fff; text-decoration: none; padding: 0 15px; font-weight: bold;" href="'.home_url().'/faqs" target="_blank" rel="noopener">FAQ\'s</a>
-                                </td>
-                            </tr>
-                            <!-- /Content footer -->
-                        </table>
-                    </td>
-                </tr>
+                <!-- /Content footer -->
             </table>
         </td>
     </tr>
@@ -761,32 +758,30 @@ function my_custom_approve_approve_user_message( $message, $user_login, $user_em
                     </td>
                     <!-- /Header -->
                 </tr>
+                <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 0;">
+                     <td class="margins-mobile" align="left" style="padding-right: 50px; padding-left: 50px; padding-top: 40px;">
+                        <table bgcolor="#ffffff" cellspacing="0" cellpadding="0" width="100%">
+                         <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                            <td align="center" width="50%">
+                                <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                                    <a href="https://www.bq.com/es/" target="_blank">
+                                        <img height="60" width="257" style="height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
+                                    </a>
+                                </p>
+                            </td>
+                             <td align="center" width="50%">
+                                <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                                    <a href="https://www.macmillaneducationeverywhere.com/es/" target="_blank">
+                                        <img height="60" width="257" style="height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
+                                    </a>
+                                </p>
+                            </td>
+                        </tr>
+                        </table>
+                     </td>
+                </tr>
 
                 <!-- / Content mail -->
-            </table>
-        </td>
-    </tr>
-    <tr valign="top" align="center">
-        <td valign="top" align="center" style="padding-bottom: 10px;">
-            <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:0px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
-                <!-- Content footer -->
-                <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
-                    <td align="center">
-                        <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
-                            <a href="https://www.bq.com/es/" target="_blank">
-                                <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
-                            </a>
-                        </p>
-                    </td>
-                     <td align="center">
-                        <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
-                            <a href="https://www.macmillaneducationeverywhere.com/es/" target="_blank">
-                                <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
-                            </a>
-                        </p>
-                    </td>
-                </tr>
-                <!-- /Content footer -->
             </table>
         </td>
     </tr>

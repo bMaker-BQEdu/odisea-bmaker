@@ -185,32 +185,32 @@
                                                                             </td>
                                                                             <!-- /Header -->
                                                                         </tr>
+                                                                        <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 0;">
+                                                                             <td class="margins-mobile" align="left" style="padding-right: 50px; padding-left: 50px; padding-top: 40px;">
+                                                                                <table bgcolor="#ffffff" cellspacing="0" cellpadding="0" width="100%">
+                                                                                 <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
+                                                                                    <td align="center" width="50%">
+                                                                                        <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                                                                                            <a href="https://www.bq.com/es/" target="_blank">
+                                                                                                <img height="60" width="257" style="height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
+                                                                                            </a>
+                                                                                        </p>
+                                                                                    </td>
+                                                                                     <td align="center" width="50%">
+                                                                                        <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
+                                                                                            <a href="https://www.macmillaneducationeverywhere.com/es/" target="_blank">
+                                                                                                <img height="60" width="257" style="height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
+                                                                                            </a>
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </table>
+                                                                             </td>
+                                                                        </tr>
+                                                                       
+                                                            
                                                         
                                                                         <!-- / Content mail -->
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr valign="top" align="center">
-                                                                <td valign="top" align="center" style="padding-bottom: 10px;">
-                                                                    <table bgcolor="#4e4d4d" cellspacing="0" cellpadding="0" width="100%" style="border-radius:4px; max-width:700px; padding:20px 0 20px 0; margin:0px auto 0;font-family:\'Open Sans\',\'Arial\',sans-serif; font-weight:300; color:#333333">
-                                                                        <!-- Content footer -->
-                                                                        <tr style="margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-top: 35px; padding-bottom: 35px">
-                                                                            <td align="center">
-                                                                                <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
-                                                                                    <a href="https://www.bq.com/es/" target="_blank">
-                                                                                        <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
-                                                                                    </a>
-                                                                                </p>
-                                                                            </td>
-                                                                             <td align="center">
-                                                                                <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
-                                                                                    <a href="https://www.macmillaneducationeverywhere.com/es/" target="_blank">
-                                                                                        <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
-                                                                                    </a>
-                                                                                </p>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <!-- /Content footer -->
                                                                     </table>
                                                                 </td>
                                                             </tr>
