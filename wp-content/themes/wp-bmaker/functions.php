@@ -591,9 +591,9 @@ function disable_new_posts() {
         $count01 = count(get_posts($args));
         //Conditionally remove link:
         if($count01>=1) {
-            echo '<style type="text/css">
-        #wp-admin-bar-new-etapa01, .post-type-etapa01 .page-title-action, #adminmenu .menu-icon-etapa01 .wp-submenu li:last-child { display:none; }
-        </style>';
+//            echo '<style type="text/css">
+//        #wp-admin-bar-new-etapa01, .post-type-etapa01 .page-title-action, #adminmenu .menu-icon-etapa01 .wp-submenu li:last-child { display:none; }
+//        </style>';
 
         }
 
@@ -603,9 +603,9 @@ function disable_new_posts() {
 
         //Conditionally remove link:
         if($count03>=1) {
-            echo '<style type="text/css">
-        #wp-admin-bar-new-etapa03, .post-type-etapa03 .page-title-action, #adminmenu .menu-icon-etapa03 .wp-submenu li:last-child { display:none; }
-        </style>';
+//            echo '<style type="text/css">
+//        #wp-admin-bar-new-etapa03, .post-type-etapa03 .page-title-action, #adminmenu .menu-icon-etapa03 .wp-submenu li:last-child { display:none; }
+//        </style>';
 
         }
         //Get number of posts authored by user
@@ -614,9 +614,9 @@ function disable_new_posts() {
 
         //Conditionally remove link:
         if($count05>=1) {
-            echo '<style type="text/css">
-        #wp-admin-bar-new-etapa05, .post-type-etapa05 .page-title-action, #adminmenu .menu-icon-etapa05 .wp-submenu li:last-child { display:none; }
-        </style>';
+//            echo '<style type="text/css">
+//        #wp-admin-bar-new-etapa05, .post-type-etapa05 .page-title-action, #adminmenu .menu-icon-etapa05 .wp-submenu li:last-child { display:none; }
+//        </style>';
         }
     }
 
