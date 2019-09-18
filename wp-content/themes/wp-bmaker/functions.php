@@ -646,7 +646,7 @@ function my_custom_request_appproval_message( $message, $user_login, $user_email
                     <td align="center">
                         <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
                             <a href="https://concurso.bmaker.es" target="_blank">
-                                <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="http://concurso.bmaker.es/concurso-bmaker/wp-content/themes/wp-bmaker/img/odisea-bMaker-logo@3x.png" alt="ODISEA bMaker" />
+                                <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/odisea-bMaker-logo@3x.png" alt="ODISEA bMaker" />
                             </a>
                         </p>
                     </td>
@@ -673,14 +673,14 @@ function my_custom_request_appproval_message( $message, $user_login, $user_email
                             <td align="center" width="50%">
                                 <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
                                     <a href="https://www.bq.com/es/" target="_blank">
-                                        <img height="60" width="257" style="height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
+                                        <img height="70"  style="height: 70px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
                                     </a>
                                 </p>
                             </td>
                              <td align="center" width="50%">
                                 <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
                                     <a href="https://www.macmillaneducationeverywhere.com/es/" target="_blank">
-                                        <img height="60" width="257" style="height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
+                                        <img height="70"  style="height: 70px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
                                     </a>
                                 </p>
                             </td>
@@ -737,7 +737,7 @@ function my_custom_approve_approve_user_message( $message, $user_login, $user_em
                     <td align="center">
                         <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
                             <a href="'.home_url().'" target="_blank">
-                                <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold; object-fit: none; object-position: 0 -30px;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/odisea-bMaker-logo@3x.png" alt="ODISEA bMaker" />
+                                <img height="60" width="257" style="width: 257px; height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/odisea-bMaker-logo@3x.png" alt="ODISEA bMaker" />
                             </a>
                         </p>
                     </td>
@@ -765,14 +765,14 @@ function my_custom_approve_approve_user_message( $message, $user_login, $user_em
                             <td align="center" width="50%">
                                 <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
                                     <a href="https://www.bq.com/es/" target="_blank">
-                                        <img height="60" width="257" style="height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
+                                        <img height="70" style="height: 70px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/bq-logo.png" alt="BQ" />
                                     </a>
                                 </p>
                             </td>
                              <td align="center" width="50%">
                                 <p style="margin-top: 0; margin-bottom: 10px; padding-top: 0; padding-bottom: 0;">
                                     <a href="https://www.macmillaneducationeverywhere.com/es/" target="_blank">
-                                        <img height="60" width="257" style="height: 60px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
+                                        <img height="70" style="height: 70px; color: #57b5c9; font-weight: bold;" src="'.home_url().'/wp-content/themes/wp-bmaker/img/macmillan-logo.png" alt="Macmillan" />
                                     </a>
                                 </p>
                             </td>
