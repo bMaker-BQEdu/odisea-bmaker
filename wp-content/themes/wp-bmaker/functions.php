@@ -748,7 +748,7 @@ function my_custom_approve_approve_user_message( $message, $user_login, $user_em
                     <!-- Header -->
                     <td class="margins-mobile" align="left" style="padding-right: 50px; padding-left: 50px; padding-top: 40px;">
                         <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px; text-align: center; font-size: 20px; font-weight: bold;">¡BIENVENIDO A TU CUENTA ODISEA bMaker!</p>
-                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Inicia sesión en el portal del concurso y comienza a desarrollar tu proyecto</p>
+                        <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Inicia sesión en el portal del concurso y comienza a desarrollar tu proyecto.</p>
                         <p style="color: #4e4d4d; font-size: 16px; margin-top: 0; margin-bottom: 15px;">Conoce qué pasos debes seguir para hacer tus publicaciones en <a style="font-weight: bold; text-decoration: none; color: #57b5c9;" href="'.home_url( '/category/hitos-de-los-profesores/' ).'">Hitos de profesores</a> haciendo clic <a style="font-weight: bold; text-decoration: none; color: #57b5c9;" href="'.home_url( '/instrucciones-para-publicaciones' ).'">aquí</a>.</p>
                        <p style="text-align: center; margin: 20px 0 30px 0;">
                             <a href="'.home_url( '/inscripcion?action=login' ).'" style="color: #fff; background-color:  #78af45; text-decoration: none; border-radius: 4px; padding: 10px 20px; font-weight: bold;">ENTRAR</a>
