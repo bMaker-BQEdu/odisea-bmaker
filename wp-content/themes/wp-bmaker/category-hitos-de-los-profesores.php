@@ -3,8 +3,7 @@ $postType = array ('etapa01' => 'Primer hito',
     'etapa02' => 'Segundo hito',
     'etapa03' => 'Tercer hito',
     'etapa04' => 'Cuarto hito',
-    'etapa05' => 'Quinto hito',
-    'etapa06' => 'Sexto hito');
+    'etapa05' => 'Quinto hito');
 ?>
 <main>
     <!-- section -->
@@ -15,7 +14,7 @@ $postType = array ('etapa01' => 'Primer hito',
 
         <?php $catID = get_cat_ID(single_cat_title('', false));
         $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
-        $postTypeQuery = ['etapa01','etapa02','etapa03','etapa04','etapa05', 'etapa06'];
+        $postTypeQuery = ['etapa01','etapa02','etapa03','etapa04','etapa05'];
         $currentPostTypeName = "Todos los hitos";
 
         if ( isset($_GET["post_type"]) && trim($_GET["post_type"]))  {
@@ -36,15 +35,12 @@ $postType = array ('etapa01' => 'Primer hito',
                 case 'etapa05':
                     $currentPostTypeName = "Quinto hito";
                     break;
-                case 'etapa06':
-                    $currentPostTypeName = "Sexto hito";
-                    break;
             }
         }
 
         $args = array( 'post_type' => $postTypeQuery,
             //'cat' => $catID,
-            'posts_per_page' => 9,
+            'posts_per_page' => 9999999,
             'paged' => $paged,
             'post_status' => 'publish',
             'orderby'=> 'date');
@@ -59,13 +55,12 @@ $postType = array ('etapa01' => 'Primer hito',
                         <svg width="22" height="22" class="icon icon-icon-angle rotate-90 ml-2"><use xlink:href="<?php bloginfo('template_url'); ?>/img/bmaker-icons/symbol-defs.svg#icon-icon-angle"></use></svg>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/category/hitos-de-los-profesores/" data-target="">Todos los hitos</a>
-                        <a class="dropdown-item" href="/category/hitos-de-los-profesores/?post_type=etapa01" data-target="etapa01">Primer hito</a>
-                        <a class="dropdown-item" href="/category/hitos-de-los-profesores/?post_type=etapa02" data-target="etapa02">Segundo hito</a>
-                        <a class="dropdown-item" href="/category/hitos-de-los-profesores/?post_type=etapa03" data-target="etapa03">Tercero hito</a>
-                        <a class="dropdown-item" href="/category/hitos-de-los-profesores/?post_type=etapa04" data-target="etapa04">Cuarto hito</a>
-                        <a class="dropdown-item" href="/category/hitos-de-los-profesores/?post_type=etapa05" data-target="etapa05">Quinto hito</a>
-                        <a class="dropdown-item" href="/category/hitos-de-los-profesores/?post_type=etapa06" data-target="etapa06">Sexto hito</a>
+                        <a class="dropdown-item" href="<?php echo esc_url( get_category_link( 2 ) ); ?>" data-target="">Todos los hitos</a>
+                        <a class="dropdown-item" href="<?php echo esc_url( get_category_link( 2 ) ); ?>?post_type=etapa01" data-target="etapa01">Primer hito</a>
+                        <a class="dropdown-item" href="<?php echo esc_url( get_category_link( 2 ) ); ?>?post_type=etapa02" data-target="etapa02">Segundo hito</a>
+                        <a class="dropdown-item" href="<?php echo esc_url( get_category_link( 2 ) ); ?>?post_type=etapa03" data-target="etapa03">Tercero hito</a>
+                        <a class="dropdown-item" href="<?php echo esc_url( get_category_link( 2 ) ); ?>?post_type=etapa04" data-target="etapa04">Cuarto hito</a>
+                        <a class="dropdown-item" href="<?php echo esc_url( get_category_link( 2 ) ); ?>?post_type=etapa05" data-target="etapa05">Quinto hito</a>
                     </div>
                 </div>
             </div>
@@ -107,7 +102,7 @@ $postType = array ('etapa01' => 'Primer hito',
                 </div><!-- #content -->
             <?php else : ?>
                 <div class="no-results d-flex align-items-center justify-content-center">
-                    <p><?php _e( 'Todavía no hay contenido que mostrar.', 'wpbmaker' ); ?> <a class="font-weight-bold" href="<?php echo esc_url( get_category_link( 4 ) ); ?>"><?php _e( 'Ver todos los hitos >', 'wpbmaker' ); ?></a> </p>
+                    <p><?php _e( 'Todavía no hay contenido que mostrar.', 'wpbmaker' ); ?> <a class="font-weight-bold" href="<?php echo esc_url( get_category_link( 2 ) ); ?>"><?php _e( 'Ver todos los hitos >', 'wpbmaker' ); ?></a> </p>
                     <img class="my-5" width="300px" src="<?php bloginfo('template_url'); ?>/img/home/home-section-3-2.svg" />
                 </div>
             <?php endif; ?>
